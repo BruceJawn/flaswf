@@ -14,4 +14,4 @@
 *If you use Flash 9 or 10, open Flash->File->NEW->Flash File(AS3.0)-> 
 Document Class->Main.as->OK->Press Ctrl+Enter.
 
-By the way, this way:"import ChatBot;var myMain=new Main();addChild(myMain);"on action script layer may get errors because I usually use "stage.stageWidth" and "stage.stageHeight" in the Class file. Find and Replace those two words to some Number like "550" and "400" and then you can compile it successfully.
+By the way, this way:"import Main; var myMain=new Main(); addChild(myMain);"on action script layer may get errors because I usually use "stage.stageWidth" and "stage.stageHeight" in the Class file. Find and Replace those two words to some Number like "550" and "400" and then you can compile it successfully.
