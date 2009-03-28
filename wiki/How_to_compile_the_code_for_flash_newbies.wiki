@@ -1,5 +1,4 @@
-#summary One-sentence summary of this page.
-How to compile the code.
+#How to compile the code.
 = Introduction =
 
 
