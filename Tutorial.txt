@@ -1,0 +1,33 @@
+AS3 Evaldraw 教程
+July 16, 2010, by Bruce Jawn
+1.基本功能
+"打开代码"-打开保存的Evaldraw代码(.txt文本文件).
+"保存代码"-将代码编辑器中代码另存为.txt文本文件.
+"导出AS3类"-将代码编辑器中Evaldraw代码转为.as类文件(AS3代码),可用于直接编译生成swf.
+"截图"-将当前画板截图并保存为.png图片文件.
+"运行(Eval)"-运行当前代码.
+"停止(Stop)"-停止当前代码运行.
+"教程"-显示当前文本.
+"关于"-项目说明.
+"代码编辑器"-切换到代码编辑器界面.
+"画板"-切换到图形输出界面.
+"输出"-切换到文本输出界面.
+2.代码编辑
+脚本引擎为BISE Scripting Engine,关于该引擎语法详细说明请参见"src\scripting\docs.htm".
+代码语法遵从ECMAScript规范,支持variables,arrays,objects and properties,if-tests,while loops and for loops,break and continue,with blocks等. 
+例子"/*变量与运算*/var x = 10; var y = x + 20; trace(y);"
+"/*循环*/for (i=0;i<5;i++){trace(i*2);}"
+3.Evaldraw的API简介
+Math:用法同AS3;例子"var a=Math.random();var b=Math.sin(a);"
+stage:用法同AS3;例子"trace(stage.mouseX);"
+trace:用法同AS3,输出结果于文本输出面板;
+Canvas:Sprite对象,直接调用;例子"trace(Canvas);"
+Pen:=Canvas.graphics;Canvas的graphics属性,用于调用graphics的绘图API.
+例子"Pen.lineStyle(10,0xff0000);Pen.moveTo(12,4);Pen.lineTo(512,512);"
+ScreenBuffer:画板输出,为一个BitmapData对象;
+例子"/*渲染绘制结果*/ScreenBuffer.draw(Canvas);";"/*直接操作屏幕像素*/ScreenBuffer.setPixel(6,6,0xff0000);"
+onEnterFrame:帧循环声明;例子"stage.frameRate=80;function onEnterFrame(){trace(stage.frameRate);}"
+更多内容请参见附带例程源代码(\Evaldraw_examples\).
+4.注意事项
+代码分隔符";"不可省略.
+代码注释请用多行注释"/**/",不支持单行注释"//".
