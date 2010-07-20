@@ -1,0 +1,1 @@
+/*使用fillRect清屏*/function onEnterFrame(){ScreenBuffer.fillRect(ScreenBuffer.rect,0xffffff);var a=Math.random()*512;var b=Math.random()*512;Pen.clear();Pen.lineStyle(10*Math.random(),0xffffff*Math.random());Pen.lineTo(a,b);/*渲染绘制结果*/ScreenBuffer.draw(Canvas);}

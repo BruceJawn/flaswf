@@ -1,0 +1,30 @@
+/*变量与运算*/
+var x = 10; var y = x + 20; 
+trace(y);
+/*循环*/
+for (i=0;i<5;i++){trace(i*2);}
+/*AS3变量*/
+trace(Math);
+trace(Math.sin(Math.random()));
+trace(stage);
+/*Evaldraw变量*/
+trace(Pen);
+trace(Canvas);
+trace(ScreenBuffer);
+/*简单绘制*/
+Pen.lineStyle(10,0xff0000);
+Pen.moveTo(6,6);
+Pen.lineTo(512,512);
+/*渲染绘制结果*/
+ScreenBuffer.draw(Canvas);
+/*声明帧循环*/
+function onEnterFrame()
+{trace(stage.frameRate);
+var a=Math.random()*512;
+var b=Math.random()*512;
+/*直接操作屏幕像素*/
+ScreenBuffer.setPixel(a,b,0xffffff*Math.random());
+Pen.lineStyle(10*Math.random(),0xffffff*Math.random());
+Pen.lineTo(a,b);
+/*渲染绘制结果*/
+ScreenBuffer.draw(Canvas);}

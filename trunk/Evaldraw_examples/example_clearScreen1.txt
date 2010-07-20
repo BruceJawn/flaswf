@@ -1,0 +1,15 @@
+/*使用setPixels清屏*/
+/*保存空屏缓存*/
+var ba=ScreenBuffer.getPixels(ScreenBuffer.rect);
+function onEnterFrame()
+{
+/*清屏*/
+ba.position = 0;
+ScreenBuffer.setPixels(ScreenBuffer.rect,ba);
+var a=Math.random()*512;
+var b=Math.random()*512;
+Pen.clear();
+Pen.lineStyle(10*Math.random(),0xffffff*Math.random());
+Pen.lineTo(a,b);
+/*渲染绘制结果*/
+ScreenBuffer.draw(Canvas);}
