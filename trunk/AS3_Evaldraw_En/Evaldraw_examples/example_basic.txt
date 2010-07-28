@@ -1,0 +1,30 @@
+/*Variables and Operations*/
+var x = 10; var y = x + 20; 
+trace(y);
+/*Loop*/
+for (i=0;i<5;i++){trace(i*2);}
+/*AS3 Vars*/
+trace(Math);
+trace(Math.sin(Math.random()));
+trace(stage);
+/*Evaldraw Vars*/
+trace(Pen);
+trace(Canvas);
+trace(ScreenBuffer);
+/*Simple Drawing*/
+Pen.lineStyle(10,0xff0000);
+Pen.moveTo(6,6);
+Pen.lineTo(512,512);
+/*Rendering the results*/
+ScreenBuffer.draw(Canvas);
+/*onEnterFrame Event Statement*/
+function onEnterFrame()
+{trace(stage.frameRate);
+var a=Math.random()*512;
+var b=Math.random()*512;
+/*Manipulate Screen Pixels*/
+ScreenBuffer.setPixel(a,b,0xffffff*Math.random());
+Pen.lineStyle(10*Math.random(),0xffffff*Math.random());
+Pen.lineTo(a,b);
+/*Rendering the results*/
+ScreenBuffer.draw(Canvas);}
