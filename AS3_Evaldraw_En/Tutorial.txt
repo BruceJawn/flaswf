@@ -1,0 +1,33 @@
+AS3 Evaldraw Tutorial
+July 16, 2010, by Bruce Jawn
+1. Basic Functions
+"Open Code"-Open saved Evaldraw code(.txt textfile).
+"Save Code"-Save the code in code editor as .txt textfile.
+"Dump AS3"-Export the Evaldraw code to .as class file(AS3), can be used to compile the swf.
+"Screenshot"- Save the current Canvas as .png image files.
+"Eval"-Run the code.
+"Stop"-Stop running.
+"Tutorial"-Display this text.
+"About"-About this project.
+"Edit Code"-Switch to the code editor.
+"Canvas"-Switch to the graphical output.
+"Output"-Switch to the text output.
+2. Scripting
+The scripting engine is BISE Scripting Engine, for details of the engine, please read "src\scripting\docs.htm".
+Comply with the ECMAScript specification, support variables, arrays, objects and properties, if-tests, while loops and for loops, break and continue, with blocks and so on. 
+example:"/*Variables and Operations*/var x = 10; var y = x + 20; trace(y);"
+"/*Loop*/for (i=0;i<5;i++){trace(i*2);}"
+3. Evaldraw API
+Math: the same as AS3; example:"var a=Math.random();var b=Math.sin(a);"
+stage: the same as AS3; example:"trace(stage.mouseX);"
+trace: the same as AS3, display output results in text output panel;
+Canvas: a Sprite object, call it directly; example:"trace(Canvas);"
+Pen: =Canvas.graphics; Canvas's graphics property, used for calling AS3 graphics's drawing API.
+example:"Pen.lineStyle(10,0xff0000);Pen.moveTo(12,4);Pen.lineTo(512,512);"
+ScreenBuffer: graphical output, a BitmapData object;
+example:"/*Rendering the results*/ScreenBuffer.draw(Canvas);";"/*Manipulate Screen Pixels*/ScreenBuffer.setPixel(6,6,0xff0000);"
+onEnterFrame: The onEnterFrame function like in AS2; example:"stage.frameRate=80;function onEnterFrame(){trace(stage.frameRate);}"
+For more information, please see the source code with routines(\Evaldraw_examples\).
+4. Notes
+Code delimiter ";" should not be omitted.
+Code comments, please use the multi-line comments "/**/", do not support the one-line comment "//". 

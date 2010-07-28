@@ -1,0 +1,15 @@
+/*use setPixels to clear the canvas*/
+/*save the empty screen buffer*/
+var ba=ScreenBuffer.getPixels(ScreenBuffer.rect);
+function onEnterFrame()
+{
+/*clear the canvas*/
+ba.position = 0;
+ScreenBuffer.setPixels(ScreenBuffer.rect,ba);
+var a=Math.random()*512;
+var b=Math.random()*512;
+Pen.clear();
+Pen.lineStyle(10*Math.random(),0xffffff*Math.random());
+Pen.lineTo(a,b);
+/*rendering the results*/
+ScreenBuffer.draw(Canvas);}
