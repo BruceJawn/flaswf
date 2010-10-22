@@ -9,8 +9,9 @@ Add your content here.
 
 ||Concept||Working in Process||Alpha||Beta||v? Released!|| 
 
-== Details: ==
+== Description: ==
 
+== Features: ==
 
 == License: ==
 
@@ -29,8 +30,6 @@ Add your content here.
 == Blog Posts: ==
 
 == Links: ==
-
-
 
 
 
