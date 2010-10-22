@@ -13,6 +13,8 @@ Add your content here.
 
 == Features: ==
 
+== Todos: ==
+
 == License: ==
 
 ||Open Source/MIT||
@@ -30,8 +32,6 @@ Add your content here.
 == Blog Posts: ==
 
 == Links: ==
-
-
 
 
 
