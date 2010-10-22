@@ -10,19 +10,19 @@
 Wolfenstein3D-like 2.5D ray casting engine in C for Flash via Adobe Alchemy.
 
 == Features: ==
-   *Support ceil/floor rendering
-   *Support sprites rendering
+   * Support ceil/floor rendering
+   * Support sprites rendering
 
 == Todos: ==
-   #Use 1D screen buffer ([]) instead of 2D screen buffer ([][]) to speed up rendering.
-   #Improve the sprite sorting function.
-   #Use a lookup table to calculate rays instead of vectors.
-   #More controls: Strafe left/right, jump/crouch, run, look up/down.
-   #Some lighting effect.
-   #A better way to handle textures/sprites, doom wad like data/resources.
-   #A better way to define a map, a map editor, import Wolfenstein map format.
-   #Animated sprites.
-   #Write a simple game.
+   # Use 1D screen buffer ([]) instead of 2D screen buffer ([][]) to speed up rendering.
+   # Improve the sprite sorting function.
+   # Use a lookup table to calculate rays instead of vectors.
+   # More controls: Strafe left/right, jump/crouch, run, look up/down.
+   # Some lighting effect.
+   # A better way to handle textures/sprites, doom wad like data/resources.
+   # A better way to define a map, a map editor, import Wolfenstein map format.
+   # Animated sprites.
+   # Write a simple game.
 
 == License: ==
 
@@ -45,4 +45,5 @@ Wolfenstein3D-like 2.5D ray casting engine in C for Flash via Adobe Alchemy.
 
 == Links: ==
 [http://www.student.kuleuven.be/~m0216922/CG/raycasting.html]
+
 [http://www.permadi.com/tutorial/raycast/index.html]
