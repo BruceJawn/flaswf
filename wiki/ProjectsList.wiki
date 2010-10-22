@@ -69,6 +69,11 @@ Add your content here.  Format your content with:
   * *Description:* Script and Vector Art based game engine in Flash AS3. 
   * *Page:*
 
+==FPS 2D==
+  * *Status:* ||_Alpha_|| 
+  * *Description:* 2D FPS game engine. 
+  * *Page:*
+
 ==Fractal Nature==
   * *Status:* ||_Alpha_|| 
   * *Description:* Fractal art generation for Flash. 
