@@ -1,4 +1,4 @@
-#All projects by Bruce.
+#summary All projects by Bruce.
 
 = Introduction =
 
