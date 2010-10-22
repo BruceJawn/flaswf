@@ -26,7 +26,7 @@ Wolfenstein3D-like 2.5D ray casting engine in C for Flash via Adobe Alchemy.
 
 == License: ==
 
-||Open Source/MIT||
+||Open Source/[http://www.opensource.org/licenses/mit-license.php MIT]||
 
 == Labels: ==
    * AS3, C
