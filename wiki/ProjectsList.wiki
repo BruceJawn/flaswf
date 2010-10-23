@@ -9,11 +9,6 @@ This page will be updated from time to time.
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
-
 ==Project Name(sub-project of ?)==
   * Status: ||Concept||Working in Process||Alpha||Beta||v? Released!|| 
   * Description: Summary of the project.
