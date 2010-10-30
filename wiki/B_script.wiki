@@ -1,0 +1,37 @@
+#B-script engine.
+
+= B-script =
+
+Simple script engine.
+
+== Status: ==
+
+||_Beta_|| 
+
+== Description: ==
+Assembly-like Script Engine for Flash games. 
+
+== Features: ==
+
+== Todos: ==
+   * final clean up, add comments.
+   * conditional compiling #if, debug print to file, i+information.
+
+== License: ==
+
+||Unkown||
+||~~Open Source/MIT~~||
+||~~Closed Source/Free~~||
+
+== Labels: ==
+   * languages
+   * tools
+== Pics: ==
+
+== Demo: ==
+
+== Source: ==
+
+== Blog Posts: ==
+
+== Links: ==
