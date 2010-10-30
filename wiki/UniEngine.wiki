@@ -9,7 +9,9 @@ Add your content here.
 
 ||_Concept_||
 
-== Description: == Pixel based, easy to port game Engine.
+== Description: == 
+
+Pixel based, easy to port game Engine.
 
 == Features: ==
    * Pure pixel based.
