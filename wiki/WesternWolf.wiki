@@ -1,0 +1,41 @@
+#summary One-sentence summary of this page.
+
+= Project Name =
+
+Add your content here.
+
+
+== Status: ==
+
+||Concept||
+
+== Description: ==
+
+== Features: ==
+
+== Todos: ==
+bullet time
+quick reload
+fast shoot
+dual mode
+knife
+
+double kill(sound)
+
+== License: ==
+
+||Open Source/MIT||
+||Closed Source/Free||
+
+== Labels: ==
+   * languages
+   * tools
+== Pics: ==
+
+== Demo: ==
+
+== Source: ==
+
+== Blog Posts: ==
+
+== Links: ==
