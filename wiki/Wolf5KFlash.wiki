@@ -1,0 +1,36 @@
+#summary One-sentence summary of this page.
+
+= Project Name =
+
+Add your content here.
+
+
+== Status: ==
+
+||v? Released!|| 
+
+== Description: ==
+
+== Features: ==
+
+== Todos: ==
+
+== License: ==
+
+||Open Source/MIT||
+||Closed Source/Free||
+
+== Labels: ==
+   * languages
+   * tools
+== Pics: ==
+
+== Demo: ==
+https://zh-cn.mochimedia.com/community/games/Bruce_Jawn/wolf5k-flash
+
+== Source: ==
+
+== Blog Posts: ==
+
+== Links: ==
+https://zh-cn.mochimedia.com/community/games/Bruce_Jawn/wolf5k-flash
