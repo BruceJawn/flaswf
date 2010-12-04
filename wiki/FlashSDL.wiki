@@ -14,7 +14,12 @@ Add your content here.
 == Features: ==
 
 == Todos: ==
-save functions
+
+SDL_IMG
+
+SDL_Mixer get sound buffer?
+
+SDL_TTF Render text?
 
 == License: ==
 
