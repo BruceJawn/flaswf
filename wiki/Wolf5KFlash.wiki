@@ -14,6 +14,17 @@ Add your content here.
 == Features: ==
 
 == Todos: ==
+show mini map
+
+optimization
+
+controls: 
+strafe left/right 
+jump
+mouse control with crosshair?
+
+ammo/gun type
+monsters with life (distance<5 player get hit)
 
 == License: ==
 
