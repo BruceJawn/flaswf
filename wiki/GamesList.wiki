@@ -20,7 +20,7 @@ zhoubu1988@gmail.com
 ==Voxel 3D Race(sub-project of ?)==
   * *Status:* ||v? Released!|| 
   * *Description:* Summary of the project.
-  * *Page:* 
+  * *Page:* http://code.google.com/p/flaswf/wiki/BengineRace
 
 ==Voxel Wolf(sub-project of ?)==
   * *Status:* ||Concept|| 
@@ -45,7 +45,7 @@ zhoubu1988@gmail.com
 ==将神(sub-project of ?)==
   * *Status:* ||Concept|| 
   * *Description:* Summary of the project.
-  * *Page:*
+  * *Page:* http://code.google.com/p/flaswf/wiki/JiangShen
 
 ==Mutation(sub-project of ?)==
   * *Status:* ||Concept|| 
