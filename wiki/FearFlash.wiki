@@ -15,7 +15,12 @@ Add your content here.
 
 == Todos: ==
 bullet time
-
+bioshock lightning
+violence blood particle
+KungFu moves: kick
+Team AI 
+radio
+grenade
 == License: ==
 
 ||Open Source/MIT||
