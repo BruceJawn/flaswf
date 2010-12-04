@@ -26,6 +26,7 @@ mouse control with crosshair?
 ammo/gun type
 monsters with life (distance<5 player get hit)
 
+more color choices, black/white?
 == License: ==
 
 ||Open Source/MIT||
