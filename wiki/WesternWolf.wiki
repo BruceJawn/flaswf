@@ -17,8 +17,13 @@ Add your content here.
 bullet time
 quick reload
 fast shoot
+freeze time(black/white)
 dual mode
 knife
+particles
+onhit physics screen shake
+pixel shade
+motion blur
 
 double kill(sound)
 
@@ -33,6 +38,8 @@ double kill(sound)
 == Pics: ==
 
 == Demo: ==
+
+== Video/Trailer: ==
 
 == Source: ==
 
