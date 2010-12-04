@@ -15,8 +15,6 @@ Add your content here.
 
 == Todos: ==
 
-double kill(sound)
-
 == License: ==
 
 ||Open Source/MIT||
