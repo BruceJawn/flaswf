@@ -33,6 +33,11 @@ This page will be updated from time to time.
   * *Status:* ||_Concept_|| 
   * *Description:* Classic FPS Wolfenstein3D remake in Flash from scratch.
   * *Page:* [http://code.google.com/p/flaswf/wiki/BackToWolfenstein]
+
+==Bed(sub-project of UniEngine)==
+  * *Status:* ||_Concept_||
+  * *Description:* Voxel map/level editor for Bengine.
+  * *Page:* [http://code.google.com/p/flaswf/wiki/Bed]
  
 ==Bengine(sub-project of UniEngine)==
   * *Status:* ||_v0.1 Released!_|| 
