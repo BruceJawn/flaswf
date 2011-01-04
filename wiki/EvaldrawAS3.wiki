@@ -16,7 +16,7 @@ AS3 Evaldraw, eval the AS3 drawing API.
 
 == Tutorials: ==
 {{{
-/*scale the screen-AS3Evaldraw Code*/
+/*scale the screen - AS3Evaldraw Code*/
 var Main=stage.getChildAt(0);
 var Screen=Main.getChildAt(0);
 Screen.scaleX=2;
