@@ -15,11 +15,13 @@ AS3 Evaldraw, eval the AS3 drawing API.
 == Features: ==
 
 == Tutorials: ==
-{{{/*scale the screen*/
+{{{
+/*scale the screen*/
 var Main=stage.getChildAt(0);
 var Screen=Main.getChildAt(0);
 Screen.scaleX=2;
-Screen.scaleY=2;}}}
+Screen.scaleY=2;
+}}}
 
 == Todos: ==
 
