@@ -1,0 +1,903 @@
+#!/usr/bin/perl
+
+#
+
+# Provide a simple interface for the Alchemy compiler. Most of this is just a stripped down version of achack's gcc
+
+#
+
+# Author: Ed McManus
+
+#
+
+# Modified by Bruce Jawn [http://bruce-lab.blogspot.com]
+
+# Notes: fixed "&nbsp" format problem, fixed catalog.xml space problem.
+
+# Put this file "alc-asc" into "alchemy/achacks" folder!
+
+#
+
+# Usage: alc-asc modifiedAlchemy.as outputLib.swc
+
+#     In this example, you would then use `import cmodule.outputLib.CLibInit;`
+
+#
+
+# Environment Variables:
+
+# DIRTY=1 - Does not delete temps
+
+# SWFBRIDGE="" - Path to SWFBridge. Defaults to $home/swfbridge/swfbridge
+
+# ASCOPTS="" - Additional options for the ASC
+
+# LOGLEVEL=5 - Log level to use for the internal reporting function. Defaults to 0, accepts [0-5]. The higher the level, the more internal debug trace statements you'll see.
+
+# NOASVECTOR=1 - Whether to use vectors or arrays. Set to 1 when targeting Flash 9.
+
+# SETJMPABUSE=1 - Undocumented.
+
+# SWFDIM="100,100" - SWF dimensions. Defaults to 800 x 600.
+
+#
+
+# Environment Variable Usage:
+
+# DIRTY=1 alc-asc modifiedAlchemy.as outputLib.swc
+
+#
+
+ 
+
+ 
+
+ 
+
+#
+
+# Setup
+
+#
+
+ 
+
+$0 =~ /^(.*)\/([^\/]+)$/;
+
+$path = $1;
+
+$name = $name || $2;
+
+ 
+
+# remove ourself from the path
+
+$ENV{PATH} =~ s/(?:^|\:)$path\/*(?:\:+|$)//g;
+
+ 
+
+$home=$ENV{ALCHEMY_HOME} || $ENV{HOME};
+
+$ascjar=$ENV{ASC} || "$home/asm-asc/lib/asc.jar";
+
+ 
+
+# 'fix' a pathname
+
+sub pfix {
+
+  my $p = (shift);
+
+  # make /usr/ to local to us
+
+  $p =~ s/(^|^-[-\w]+=?)(\/usr\/include\/)/$1${home}\/avm2-libc\/include\//;
+
+  $p =~ s/(^|^-[-\w]+=?)(\/usr\/)/$1${home}$2/;
+
+  # make pathes mixed on cygwin
+
+  if(`uname` =~ /CYGWIN/) {
+
+    my $pp;
+
+    $p =~ s/(^|^-[-\w]+=?)(\/.*)/chomp($pp = `cygpath -a -m '$2'`), $1.$pp/e;
+
+  }
+
+  return $p;
+
+}
+
+ 
+
+sub sys {
+
+  my @nargs = @_;
+
+  system(@nargs);
+
+  if($?)
+
+    { exit($?) }
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+$cpackage = "cmodule";
+
+$flashlibs="$home/flashlibs";
+
+$libc="$home/avm2-libc";
+
+$libclib="$libc/lib/avm2-libc.l.bc";
+
+$libcpplib="$libc/lib/avm2-libstdc++.l.bc";
+
+$machimp="$libc/lib/asmachine.abc";
+
+$libcinc="$libc/include";
+
+$libcppinc="$libc/include/c++/3.4";
+
+$avm2envh="$libc/avm2/AVM2Env.h";
+
+$swfbridge=$ENV{SWFBRIDGE} || "$home/swfbridge/swfbridge";
+
+@asimps = (
+
+"Date",
+
+"flash.utils:Dictionary",
+
+"flash.utils:Timer",
+
+"flash.net:Socket",
+
+"flash.events:Event",
+
+"flash.events:ProgressEvent",
+
+"flash.events:IOErrorEvent",
+
+"flash.utils:ByteArray",
+
+"flash.display:Sprite",
+
+"flash.display:Stage",
+
+"flash.text:TextField",
+
+"flash.display:Bitmap",
+
+"flash.display:BitmapData",
+
+);
+
+ 
+
+ 
+
+@nostds = ($name eq "g++") ? ("-nostdinc", "-nostdinc++") :
+
+  ("-nostdinc");
+
+@incs = ($name eq "g++") ? ("-I$libcinc", "-I$libcppinc") :
+
+  ("-I$libcinc");
+
+# additional stuff...
+
+push(@incs, (
+
+  # many things needs this...
+
+  "-I/usr/local/include"
+
+));
+
+ 
+
+@compile = ("llvm-$name", "-emit-llvm", @nostds, @incs, "--include", $avm2envh);
+
+@srcs = ();
+
+@link = ("llvm-ld");
+
+$optlvl = $ENV{OPTLVL} || "-O5";
+
+@objs = ();
+
+@opt = ("opt");
+
+@llc = ("llc", "-march=avm2", 
+
+#"-avm2-eager-dispatch", # WARNING! doesn't work w/ SetjmpAbuse
+
+#"-avm2-machine-pooling"
+
+);
+
+if(!$ENV{NOMEMUSER})
+
+  { push(@llc, "-avm2-use-memuser") }
+
+if($ENV{FORCESYNC})
+
+  { push(@llc, "-avm2-force-sync") }
+
+@java = ("java");
+
+@asc = (
+
+  "-jar", $ascjar,
+
+  "-AS3", "-strict",
+
+  #"-import", "F:/alchemy/flashlibs/Profiler.as",#"-import", "$flashlibs/Profiler.as",
+
+  "-import", "F:/alchemy/flashlibs/global.abc",#"-import", "$flashlibs/global.abc",
+
+  "-import", "F:/alchemy/flashlibs/playerglobal.abc");#"-import", "$flashlibs/playerglobal.abc");
+
+if($ENV{ASCOPTS})
+
+  { push(@asc, split(/\s+/, $ENV{ASCOPTS})) }
+
+# -L paths
+
+@L = (
+
+  "/usr/local/lib"
+
+); 
+
+%l = (); # -l libs
+
+ 
+
+$avmshell = $ENV{AVMSHELL};
+
+ 
+
+# map /usr/..., etc. to local equiv
+
+%libmap = ();
+
+ 
+
+ 
+
+#
+
+# Script parameter handling
+
+#
+
+ 
+
+# handle -L...
+
+sub dash_L {
+
+  my $arg = (shift);
+
+  my $path;
+
+ 
+
+  if($arg =~ /-L=?(.+)/)
+
+    { $path = $1 } 
+
+  else
+
+    { $path = shift(@ARGV) }
+
+  my $ppath = $libmap{$path};
+
+  my @pathes = $ppath ? @$ppath : ($path);
+
+  push(@L, @pathes);
+
+  0
+
+}
+
+ 
+
+# handle -l...
+
+sub dash_l {
+
+  my $arg = (shift);
+
+  my $lib;
+
+ 
+
+  if($arg =~ /-l=?(.+)/)
+
+    { $lib = $1 } 
+
+  else
+
+    { $lib = shift(@ARGV) }
+
+  $l{$lib} = 1;
+
+  0
+
+}
+
+ 
+
+# map /usr/..., etc. to local equivalent
+
+%incmap = ();
+
+ 
+
+# handle -I...
+
+sub dash_I {
+
+  my $arg = (shift);
+
+  my $path;
+
+ 
+
+  if($arg =~ /-I=?(.*)/)
+
+    { $path = $1 } 
+
+  else
+
+    { $path = shift(ARGV) }
+
+  my $ppath = $incmap{$path};
+
+  my @pathes = $ppath ? @$ppath : ($path);
+
+  push(@compile, map { "-I$_" } @pathes);
+
+  0
+
+}
+
+ 
+
+sub resolve_libs {
+
+  my %libs = ();
+
+  my @dirs = map { pfix($_) } @L;
+
+ 
+
+  open(FIND, "-|", "find", @dirs, "-name", "*.l.bc");
+
+  while(<FIND>) {
+
+    if(/^.*\/([^\/]+)\.l\.bc$/) {
+
+      chomp($libs{$1} = $_);
+
+    }
+
+  }
+
+  close(FIND);
+
+ 
+
+  foreach my $lib (keys(%l)) {
+
+    my $path = $libs{$lib};
+
+    if($path) {
+
+      push(@objs, $path);
+
+    }
+
+  }
+
+}
+
+ 
+
+ 
+
+# Param => Handler lookup
+
+ 
+
+@opthdl = (
+
+'-print-prog-name=.*' => sub {
+
+                          (shift) =~ /=(.*)/;
+
+                          print "$path/$1\n";
+
+                          exit(0);
+
+                        },
+
+'-g'                => sub { $debug = 1; "c" },
+
+'-v'                => sub { $mode="v"; "c" },
+
+'--version'         => sub { $mode="v"; "c" },
+
+'(--help)|(-h)'     => sub {
+
+           &nbsp;           &nbsp;        # Print usage
+
+           &nbsp;           &nbsp;        
+
+           &nbsp;           &nbsp;        print "\n  alc-asc provides a simple interface for the Alchemy compiler.\n\n";
+
+           &nbsp;           &nbsp;        
+
+           &nbsp;           &nbsp;        print "  Usage:\n  alc-asc modifiedAlchemy.as outputLib.swc\n";
+
+           &nbsp;           &nbsp;        print "  In this example, you would then use `import cmodule.outputLib.CLibInit;`\n\n";
+
+           &nbsp;           &nbsp;        
+
+           &nbsp;           &nbsp;        print "  Environment Variables:\n";
+
+           &nbsp;           &nbsp;        print "  DIRTY=1 - Do not delete temps.\n";
+
+           &nbsp;           &nbsp;        print "  SWFBRIDGE=\"\" - Path to SWFBridge. Defaults to $home/swfbridge/swfbridge.\n";
+
+           &nbsp;           &nbsp;        print "  ASCOPTS=\"\" - Additional options for the ASC.\n";
+
+           &nbsp;           &nbsp;        print "  LOGLEVEL=5 - Log level to use for the internal reporting function. Defaults to 0, accepts [0-5]. The higher the level, the more internal debug trace statements you'll see.\n";
+
+           &nbsp;           &nbsp;        print "  NOASVECTOR=1 - Whether to use vectors or arrays. Set to 1 when targeting Flash 9.\n";
+
+           &nbsp;           &nbsp;        print "  SETJMPABUSE=1 - Undocumented.\n";
+
+           &nbsp;           &nbsp;        print "  SWFDIM=\"100,100\" - SWF dimensions. Defaults to 800 x 600.\n\n";
+
+           &nbsp;           &nbsp;        
+
+           &nbsp;           &nbsp;        print "  Environment Variable Usage:\n";
+
+           &nbsp;           &nbsp;        print "  DIRTY=1 alc-asc modifiedAlchemy.as outputLib.swc\n\n";
+
+           &nbsp;           &nbsp;        
+
+           &nbsp;           &nbsp;        exit(0);
+
+           &nbsp;           &nbsp;      },
+
+'-c'                => sub { $mode="c"; "c" },
+
+'-E'                => sub { $mode="p"; "c" },
+
+'-D.*'              => sub { "c" },
+
+'-U.*'              => sub { "c" },
+
+'-o'                => sub {
+
+                          $o = $ARGV[1]; shift(@ARGV); @opto = ("-o", $o);
+
+                          if($o =~ /([^\.]*)/) {
+
+                            $cpackage = $1;
+
+                            $cpackage =~ s/\./_/g;
+
+                            $cpackage =~ s/\//./g;
+
+                            $cpackage =~ s/\s+$//g;
+
+                            $cpackage =~ s/[^\w\.]/_/g;
+
+                            $cpackage =~ s/\.+$//g;
+
+                            $cpackage = "cmodule.$cpackage";
+
+                          }
+
+                          0;
+
+                        },
+
+'.*\.(?:as)'        => sub { # Source AS3 File -- Modified Alchemy output
+
+                          $s = (shift);
+
+           # &nbsp;           &nbsp;        
+		   $mode = $mode || "cl";
+
+                          0
+
+                        },
+
+'.*\.(?:swc)'       => sub {
+
+                          $o = (shift);
+
+           #&nbsp;           &nbsp;        # Get package name from output target
+
+           #&nbsp;           &nbsp;        
+		   if($o =~ /([^\.]*)/) {
+
+                            $cpackage = $1;
+
+                            $cpackage =~ s/\./_/g;
+
+                            $cpackage =~ s/\//./g;
+
+                            $cpackage =~ s/\s+$//g;
+
+                            $cpackage =~ s/[^\w\.]/_/g;
+
+                            $cpackage =~ s/\.+$//g;
+
+           #&nbsp;           &nbsp;           
+		   print "\nimport cmodule.$cpackage.CLibInit;\n\n";
+
+                            $cpackage = "cmodule.$cpackage";
+
+                            # $cpackage = "cmodule.libSNES9x";
+
+                          }
+
+           #&nbsp;           &nbsp;        
+		   0
+
+                        },
+
+);
+
+ 
+
+ 
+
+# default (only?) build mode
+
+$swc = 1; $shared = 0;
+
+ 
+
+ 
+
+# Iterate over all args, calling handlers when available
+
+while($#ARGV >= 0)
+
+{
+
+  my $arg = $ARGV[0];
+
+  my $dst = "c";
+
+ 
+
+  for(my $i = 0; $i < $#opthdl; $i += 2)
+
+  {
+
+    my $pat = $opthdl[$i];
+
+    my $sub = $opthdl[$i + 1];
+
+    my $expr = "\$arg =~ /^$pat\$/";
+
+ 
+
+    if(eval($expr))
+
+      { $dst = $sub->($arg) }
+
+  }
+
+  $arg = shift(@ARGV);
+
+  if($dst eq "l")
+
+    { push(@link, $arg) }
+
+  elsif($dst eq "c")
+
+    { push(@compile, $arg) }
+
+}
+
+ 
+
+ 
+
+# ASC Complier Vars
+
+$confShell = $avmshell ? "true" : "false";
+
+$confNoShell = $avmshell ? "false" : "true";
+
+$confLogLevel = $ENV{LOGLEVEL} || "0";
+
+$confVector = $ENV{NOASVECTOR} ? "false" : "true";
+
+$confNoVector = $ENV{NOASVECTOR} ? "true" : "false";
+
+$setjmpAbuse = $ENV{SETJMPABUSE} ? "true" : "false";
+
+$confDebugger = $debug ? "true" : "false";
+
+$confNoDebugger = $debug ? "false" : "true";
+
+push(@asc,
+
+  "-config", "Alchemy::Debugger=$confDebugger",
+
+  "-config", "Alchemy::NoDebugger=$confNoDebugger",
+
+  "-config", "Alchemy::Shell=$confShell",
+
+  "-config", "Alchemy::NoShell=$confNoShell",
+
+  "-config", "Alchemy::LogLevel=$confLogLevel",
+
+  "-config", "Alchemy::Vector=$confVector",
+
+  "-config", "Alchemy::NoVector=$confNoVector",
+
+  "-config", "Alchemy::SetjmpAbuse=$setjmpAbuse" #,  "-optimize" # Unsupported for new opcodes?
+
+);
+
+ 
+
+# Hardcode Mode
+
+$mode = "cl";
+
+ 
+
+# 
+
+# Compile step
+
+#
+
+if(index($mode, "c") >= 0) {
+
+ 
+
+  my $dim = $ENV{SWFDIM} || "800,600";
+
+  my @ai = $shared ?
+
+    ("-import", $machimp, "-swf", "$cpackage.CLibDummySprite,0,0,0")
+
+    : ("-swf", "$cpackage.ConSprite,$dim,60");
+
+ 
+
+  # Want to call: java -jar /Users/edmcmanus/alchemy/v0.5/bin/asc.jar -AS3
+
+ 
+
+  # getting some errors when heap max is over 1G
+
+  $jmemmin = 16;
+
+  $jmemmax = 1024;
+
+  @jmem = ("-Xms${jmemmin}M", "-Xmx${jmemmax}M");
+
+ 
+
+  print "asc" . join(" ", @asc) . "\n\n";
+
+  print "ai" . join(" ", @ai) . "\n\n";
+
+ 
+
+  # copy source as file to a properly named target
+
+  print "Creating a copy of the source file\n";
+
+  system( 'cp', $s, $last = "$$.alc-asc.as" );
+
+ 
+
+  @oo = ( "$$.alc-asc.as" );
+
+ 
+
+  # Build SWF -- we'll convert this into a SWC next
+
+  print "Building tmp SWF\n";
+
+  sys(@java, @jmem, @asc, @ai, @oo);
+
+  $last = "$$.alc-asc.swf";
+
+ 
+
+  if($swc) {
+
+    $cname = "CLibInit";
+
+    $script = "$cpackage/$cname";
+
+    $script =~ s/\./\//g;
+
+    print "\nGetting ABC\n";
+
+    sys("GetABC2.pl", $last, "$$.alc-asc.abc");
+
+    print "\nInserting ABC into template\n";
+
+    sys("PutABC2.pl", "$path/swctmpl.swf", "library.swf", "$$.alc-asc.abc", $script);
+
+    sys("rm", "$$.alc-asc.abc");
+
+     if(!$ENV{NOMEMUSER}) {
+
+          sys("mv", "library.swf", "temp.swf");
+
+          sys("V10SWF.pl", "temp.swf", "library.swf");
+
+          sys("rm", "temp.swf");
+
+     }
+
+    open(CAT, ">catalog.xml");
+
+    $imps = join("", map { <<END
+
+        <dep id="$_" type="e" /> 
+
+        <dep id="$_" type="s" /> 
+
+END
+
+} @asimps);
+
+    # TODO at emit correct info (mod time, etc.)
+
+    # TODO is the template swc ok?
+
+    #print CAT <<END	
+	print CAT<<END
+<?xml version="1.0" encoding ="utf-8"?><swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.0" />
+    <flex version="2.0" build="143452" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="$script"  mod="1177909560000" >
+        <def id="$cpackage:$cname" /> 
+
+        $imps
+
+        <dep id="AS3" type="n" /> 
+        <dep id="Object" type="i" /> 
+      </script>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>
+END
+
+;
+
+    close(CAT);
+
+ 
+
+    # check whether line endings need to be fixed on Cygwin
+
+    $need_fix = qx/mount | grep "cygdrive.*binmode"/;
+
+    if($need_fix) {
+
+        print "converting to DOS line endings\n";
+
+        sys("unix2dos", "catalog.xml");
+
+    }
+
+ 
+
+    # create swc
+
+    print "\nBuilding SWC\n";
+
+    sys("zip",  "$$.achacks.swc", "catalog.xml", "library.swf");
+
+    #sys("rm", "catalog.xml", "library.swf", $last);
+
+    $last = "$$.achacks.swc";
+
+  } elsif(!$shared) {
+
+    open(SWF, $last);
+
+    open(SH, ">" . ($last = "$$.achacks.sh"));
+
+    if(!$swf)
+
+      { print SH "#!$swfbridge\n" }
+
+    undef $/;
+
+    print SH (<SWF>);
+
+    close(SH);
+
+    close(SWF);
+
+  }
+
+}
+
+ 
+
+# move to final path
+
+if($last) {
+
+  $o = $opto[1] || $o;
+
+  if($implib)
+
+    { sys("touch", "$implib") } # CHEESE -- generate abc for implib instead?
+
+  sys("mv", $last, $o);
+
+  sys("chmod", "+x", $o)
+
+}
+
+ 
+
+# remove temp files
+
+if(!$ENV{ACHACKS_TMPS} && !$ENV{DIRTY}) {
+
+      print "\nRemoving temporary files.\n";
+
+      sys("rm", "-f", <$$.alc-asc.*>);
+
+}
+
+else
+
+{
+
+     print "\nLeaving temporary files.\n";
+
+}
+
+ 
+
+# done!
+
+print "\nComplete!\n"
+
+ 
