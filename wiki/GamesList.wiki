@@ -69,10 +69,20 @@ Released games: [https://en.mochimedia.com/community/profile/Bruce_Jawn/portfoli
   * *Description:* Summary of the project.
   * *Page:* http://code.google.com/p/flaswf/wiki/FlashTank
 
+==GirlSword(sub-project of ?)==
+  * *Status:* ||Concept|| 
+  * *Description:* 越女剑
+  * *Page:* http://code.google.com/p/flaswf/wiki/FlashTank
+
 ==JYQXZFlash(sub-project of ?)==
   * *Status:* ||Concept|| 
   * *Description:* Summary of the project.
   * *Page:* http://code.google.com/p/flaswf/wiki/JYQXZFlash
+
+==JYQXZTextRPG(sub-project of ?)==
+  * *Status:* ||Concept||Working in Process||Alpha||Beta||v? Released!|| 
+  * *Description:* 金庸群侠传文字RPG(Text Adventure/Text Rpg).
+  * *Page:* Click this for project detals.
 
 ==UniFight(sub-project of ?)==
   * *Status:* ||Concept|| 
