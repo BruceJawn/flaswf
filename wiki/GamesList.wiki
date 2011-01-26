@@ -3,7 +3,10 @@
 = Introduction =
 
 I'm listing all my flash games here.
-Most of my games will be open source, and source codes will be released within the game(You can find the download link of the source code in game menu's 'credit' or 'about'). 
+Most of my games will be open source, and source codes will be released within the game
+
+(You can find the download link of the source code in game menu's 'credit' or 'about').
+
 If you want to sponsor my game, contact me via email
 zhoubu1988@gmail.com
 
