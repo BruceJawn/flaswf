@@ -1,0 +1,46 @@
+<languageVersion : 1.0;>
+
+kernel untitled
+<   namespace : "FLASWF";
+    vendor : "Bruce Jawn";
+    version : 1;
+    description : "Simple Posterization Post Processing Effect.";
+>
+/**
+ *Poster Shader
+ *Reference:
+ *http://www.geeks3d.com/20091027/shader-library-posterization-post-processing-effect-glsl/
+ *February 1, 2011
+ *Bruce Jawn
+ *http://bruce-lab.blogspot.com
+  
+ *Copyright (c) <2011> <Bruce Jawn>
+ *This software is released under the MIT License 
+ *<http://www.opensource.org/licenses/mit-license.php>
+ **/
+{
+    input image4 src;
+    output pixel4 dst;
+
+    void
+    evaluatePixel()
+    {
+    float gamma=0.6; // 0.6
+    float numColors=8.0; // 8.0
+    float4 c = sampleNearest(src,outCoord());
+  
+    c.r = pow(c.r, (gamma));
+    c.g = pow(c.g, (gamma));
+    c.b = pow(c.b, (gamma));
+    c = c * numColors;
+    c = floor(c);
+    c = c / numColors;
+   
+    c.r = pow(c.r, (1.0/gamma));
+    c.g = pow(c.g, (1.0/gamma));
+    c.b = pow(c.b, (1.0/gamma));
+    c.a=1.0;
+    
+    dst =c;
+    }
+}
