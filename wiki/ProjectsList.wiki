@@ -72,7 +72,7 @@ This page will be updated from time to time.
 ==Chatbot Flash==
   * *Status:* ||_v0.1 Released!_|| 
   * *Description:* Flash AS3 chatbot. 
-  * *Page:*
+  * *Page:* http://code.google.com/p/flaswf/downloads/list
 
 ==Evaldraw AS3==
   * *Status:* ||_v0.1 Released!_|| 
@@ -108,6 +108,11 @@ This page will be updated from time to time.
   * *Status:* ||_Alpha_|| 
   * *Description:* Chinese chess game in Flash. 
   * *Page:*
+
+==MegaHal Flash==
+  * *Status:* ||v? Released!|| 
+  * *Description:* Flash port of MegaHal? ChatBot.
+  * *Page:* [http://code.google.com/p/flaswf/wiki/MegahalFlash]
 
 ==Palette AS3==
   * *Status:* ||_Alpha_||
