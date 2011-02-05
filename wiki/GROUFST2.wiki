@@ -25,6 +25,7 @@ Ken Silverman's GROUFST2 Terrain Raycaster ported to AS3.
 == Pics: ==
 
 == Demo: ==
+[http://flaswf.googlecode.com/svn/trunk/GROUFST2/groufst2AS3.swf]
 
 == Source: ==
 [http://flaswf.googlecode.com/svn/trunk/GROUFST2/]
