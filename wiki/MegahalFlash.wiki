@@ -1,35 +1,38 @@
-#summary One-sentence summary of this page.
+#summary Flash port of MegaHal ChatBot.
 
-= Project Name =
+= MegaHal Flash =
 
-Add your content here.
+Flash port of MegaHal ChatBot.
 
 
 == Status: ==
 
-||Beta|| 
+||Released!|| 
 
 == Description: ==
 
 == Features: ==
 
 == Todos: ==
-save functions
+~~save functions~~(done)
 
 == License: ==
 
-||Open Source/MIT||
-||Closed Source/Free||
+||Open Source/GNU GPLv2||
 
 == Labels: ==
-   * languages
-   * tools
+   * languages C, AS3
+   * tools Alchemy
 == Pics: ==
 
 == Demo: ==
+[http://www.newgrounds.com/portal/view/561472]
 
 == Source: ==
+[http://www.newgrounds.com/portal/view/561472]
+(Right Click -> Download Source Code)
 
 == Blog Posts: ==
 
 == Links: ==
+[http://megahal.alioth.debian.org]
