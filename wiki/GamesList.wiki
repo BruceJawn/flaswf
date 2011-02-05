@@ -71,6 +71,11 @@ Games with full source code: Coming soon...
   * *Description:* Summary of the project.
   * *Page:* http://code.google.com/p/flaswf/wiki/SpaceShoot
 
+==The Feeder(sub-project of ?)==
+  * *Status:* ||v? Released!|| 
+  * *Description:* Summary of the project.
+  * *Page:* Click this for project detals.
+
 ==FlashTank(sub-project of ?)==
   * *Status:* ||Concept|| 
   * *Description:* Summary of the project.
