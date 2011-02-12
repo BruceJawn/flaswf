@@ -27,11 +27,14 @@ Flash port of MegaHal ChatBot.
 
 == Demo: ==
 [http://www.kongregate.com/games/Bruce_Jawn/megahal-flash-chatbot-training]
+
 [http://www.newgrounds.com/portal/view/561472]
 
 == Source: ==
 [http://www.kongregate.com/games/Bruce_Jawn/megahal-flash-chatbot-training]
+
 [http://www.newgrounds.com/portal/view/561472]
+
 (Right Click -> Download Source Code)
 
 == Blog Posts: ==
