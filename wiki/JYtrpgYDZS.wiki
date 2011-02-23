@@ -1,0 +1,37 @@
+#summary One-sentence summary of this page.
+
+= 金庸群侠传文字RPG =
+
+文字RPG版金庸群侠传.
+
+
+== Status: ==
+
+||Concept||Working in Process||Alpha||Beta||v? Released!|| 
+
+== Description: ==
+游戏操作:数字键控制选择(支持小键盘)。
+
+== Features: ==
+
+== Todos: ==
+
+== License: ==
+
+||Open Source/GNU GPL v3||
+
+== Labels: ==
+   * languages
+   * tools
+== Pics: ==
+
+== Demo: ==
+http://games.mochiads.com/c/g/_v31290/JYtrpg.swf
+
+== Source: ==
+http://games.mochiads.com/c/g/_v31290/JYtrpg.swf
+游戏中, 鼠标右键-〉(下载游戏源代码)
+
+== Blog Posts: ==
+
+== Links: ==
