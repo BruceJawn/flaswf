@@ -12,7 +12,9 @@ zhoubu1988@gmail.com
 
 Released games: [https://en.mochimedia.com/community/profile/Bruce_Jawn/portfolio]
 
-Games with full source code: Coming soon...
+Games with full source code: ~~Coming soon...~~
+MegahalFlash
+JYtrpgYDZS
 
 = Details =
 
