@@ -47,7 +47,7 @@ Games with full source code: Coming soon...
   * *Page:*
 
 ==Chinese Chess(sub-project of ?)==
-  * *Status:* ||Concept|| 
+  * *Status:* ||v? Released|| 
   * *Description:* Summary of the project.
   * *Page:* http://code.google.com/p/flaswf/wiki/ChineseChess
 
@@ -60,6 +60,11 @@ Games with full source code: Coming soon...
   * *Status:* ||Concept|| 
   * *Description:* Summary of the project.
   * *Page:* http://code.google.com/p/flaswf/wiki/Mutation
+
+==MegahalFlash(sub-project of ?)==
+  * *Status:* ||v? Released|| 
+  * *Description:* Summary of the project.
+  * *Page:* http://code.google.com/p/flaswf/wiki/MegahalFlash
 
 ==Panorama 3D - The Game(sub-project of Z-Ground/Bengine)==
   * *Status:* ||Concept|| 
@@ -92,7 +97,7 @@ Games with full source code: Coming soon...
   * *Page:* http://code.google.com/p/flaswf/wiki/JYQXZFlash
 
 ==JYQXZTextRPG(sub-project of ?)==
-  * *Status:* ||Concept||Working in Process||Alpha||Beta||v? Released!|| 
+  * *Status:* ||v? Released!|| 
   * *Description:* 金庸群侠传文字RPG(Text Adventure/Text Rpg).
   * *Page:* http://code.google.com/p/flaswf/wiki/JYtrpgYDZS
 
