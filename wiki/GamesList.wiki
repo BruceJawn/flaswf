@@ -94,7 +94,7 @@ Games with full source code: Coming soon...
 ==JYQXZTextRPG(sub-project of ?)==
   * *Status:* ||Concept||Working in Process||Alpha||Beta||v? Released!|| 
   * *Description:* 金庸群侠传文字RPG(Text Adventure/Text Rpg).
-  * *Page:* Click this for project detals.
+  * *Page:* http://code.google.com/p/flaswf/wiki/JYtrpgYDZS
 
 ==UniFight(sub-project of ?)==
   * *Status:* ||Concept|| 
