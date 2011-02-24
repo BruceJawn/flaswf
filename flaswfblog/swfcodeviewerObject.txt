@@ -1,0 +1,64 @@
+<pre class="brush:as3">
+</pre>
+
+
+<object align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=" height="400" id="getHtmlParams" width="400"><param name="_cx" value="10583">
+<param name="_cy" value="10583">
+<param name="FlashVars" value="">
+<param name="Movie" value="http://zhoubu1988.googlepages.com/codeViewer.swf?codeurlPath=http://zhoubu1988.googlepages.com/IBET_Test_Timeline_Class.as">
+<param name="Src" value="http://zhoubu1988.googlepages.com/codeViewer.swf?codeurlPath=http://zhoubu1988.googlepages.com/IBET_Test_Timeline_Class.as">
+<param name="WMode" value="Window">
+<param name="Play" value="-1">
+<param name="Loop" value="-1">
+<param name="Quality" value="High">
+<param name="SAlign" value="">
+<param name="Menu" value="-1">
+<param name="Base" value="">
+<param name="AllowScriptAccess" value="">
+<param name="Scale" value="ShowAll">
+<param name="DeviceFont" value="0">
+<param name="EmbedMovie" value="0">
+<param name="BGColor" value="FFFFFF">
+<param name="SWRemote" value="">
+<param name="MovieData" value="">
+<param name="SeamlessTabbing" value="1">
+<param name="Profile" value="0">
+<param name="ProfileAddress" value="">
+<param name="ProfilePort" value="0">
+<param name="AllowNetworking" value="all">
+<param name="AllowFullScreen" value="false">
+   <embed src="http://zhoubu1988.googlepages.com/codeViewer.swf" quality="high" bgcolor="#ffffff" width="400" height="400" name="http://zhoubu1988.googlepages.com/codeViewer.swf" align="middle" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed> </object>
+<embed bgcolor="#FFFFFF" height="256" menu="false" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://flaswf.blog.com/files/2010/05/Panoramasea.swf" type="application/x-shockwave-flash" width="256"></embed>
+
+
+
+<object id="getHtmlParams" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=" height="400" width="400" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="_cx" value="10583">
+<param name="_cy" value="10583">
+<param name="FlashVars" value="">
+<param name="Movie" value="http://zhoubu1988.googlepages.com/codeViewer.swf?codeurlPath=http://zhoubu1988.googlepages.com/Panorama2D.as">
+<param name="Src" value="http://zhoubu1988.googlepages.com/codeViewer.swf?codeurlPath=http://zhoubu1988.googlepages.com/Panorama2D.as">
+<param name="WMode" value="Window">
+<param name="Play" value="-1">
+<param name="Loop" value="-1">
+<param name="Quality" value="High">
+<param name="SAlign" value="">
+<param name="Menu" value="-1">
+<param name="Base" value="">
+<param name="AllowScriptAccess" value="">
+<param name="Scale" value="ShowAll">
+<param name="DeviceFont" value="0">
+<param name="EmbedMovie" value="0">
+<param name="BGColor" value="FFFFFF">
+<param name="SWRemote" value="">
+<param name="MovieData" value="">
+<param name="SeamlessTabbing" value="1">
+<param name="Profile" value="0">
+<param name="ProfileAddress" value="">
+<param name="ProfilePort" value="0">
+<param name="AllowNetworking" value="all">
+<param name="AllowFullScreen" value="false">
+
+
+
+<embed src="http://zhoubu1988.googlepages.com/codeViewer.swf" quality="high" bgcolor="#ffffff" width="400" height="400" name="http://zhoubu1988.googlepages.com/codeViewer.swf" align="middle" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+</object>

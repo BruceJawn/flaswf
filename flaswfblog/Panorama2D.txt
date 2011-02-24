@@ -1,0 +1,39 @@
+﻿package {
+	import flash.display.*;
+	import flash.events.*;
+	import flash.geom.*;
+	public class Panorama2D extends Sprite {
+
+		var g:Sprite = new Sprite();
+		var image:BitmapData = new source(0,0);
+		/*your panoramic picture - suppose to be W*(H=256)(class name "source")in the lib*/
+		var output:BitmapData = new BitmapData(256,256,true,0);
+		var bounds:Rectangle = output.rect;
+		var origin:Point = new Point();
+		var dx:Number = 0;
+		var dy:Number = 0;
+		var matrix:Matrix = new Matrix();
+		public function Panorama2D():void {
+			var container:Bitmap = new Bitmap(output);
+			addChild(container);
+			addEventListener(Event.ENTER_FRAME,onEnterFrame);
+		}
+		function onEnterFrame(event:Event):void {
+			dx = dx + (128 - mouseX) / 8;
+			matrix.tx=dx;
+
+			g.graphics.beginBitmapFill(image, matrix, true);
+			g.graphics.drawRect(0, 0,256,256);
+			g.graphics.endFill();
+
+			matrix.tx=0;
+			matrix.ty=0;
+
+			output.fillRect(bounds, 0);
+			output.draw(g, matrix);
+
+			g.graphics.clear();
+		}
+
+	}//end of class
+}//end of package
