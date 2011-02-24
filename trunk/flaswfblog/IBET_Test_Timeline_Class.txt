@@ -1,0 +1,94 @@
+﻿/**
+ *Simple Image Binarization and Edge Tracing Test in ActionScript3.0
+ *May. 15, 2009
+ *Bruce Jawn
+ *http://bruce-lab.blogspot.com/
+ *http://www.geocities.com/zhoubu1988
+  
+ *Feel Free To Use This Code!
+ *Build this class file with FLEX or FlashDevelop 
+ *OR Set Document Class in Flash IDE (9 and above)
+ *OR just copy what between "TIMELINE CODES BEGIN<<"*">>TIMELINE CODES END"-
+ *to Flash IDE TIMELINE and Press Ctrl+Enter.-
+ *Don't forget to give your image a linkage-"SourceImage"-
+ *and remove "//" before "var mytex:..."!
+ **/
+package {
+	import flash.display.*;
+	//[SWF(backgroundColor="#000000", frameRate="12", width="550", height="400")]
+	public class IBET_Test_Timeline_Class extends Sprite {
+		[Embed(source='Your_Image_URL_Here.jpg')]
+		private var SourceImage:Class;
+		public function IBET_Test_Timeline_Class():void {
+			var mytex:BitmapData=(new SourceImage()).bitmapData;
+			//------------------------------------------------
+			//TIMELINE CODES BEGIN<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+			//var mytex:BitmapData=new SourceImage(0,0);
+			var w:int=mytex.width;
+			var h:int=mytex.height;
+			var c:Array=new Array(256);
+
+			function look(a:int,b:int):void {
+				for (var i:int=0; i< a; i++) {
+					c[i]=0x00ffffff;
+				}
+				for (var i:int=a; i< a+b-1; i++) {
+					c[i]=0x00000000;
+				}
+				for (var i:int=a+b-1; i<=255; i++) {
+					c[i]=0x00ffffff;
+				}
+			}//end of function look
+
+			look(50,100);
+
+			var outB:BitmapData=new BitmapData(w,h,false,0x000000);//Binarized Image
+
+			//Graylize Source Image
+			for (var i:int=w-1; i>=0; i--) {
+				for (var j:int=0; j<=h-1; j++) {
+					var pixelValue:uint=mytex.getPixel32(i,j);
+					var alphaValue:uint=pixelValue>>24&0xFF;
+					var red:uint=pixelValue>>16&0xFF;
+					var green:uint=pixelValue>>8&0xFF;
+					var blue:uint=pixelValue&0xFF;
+					var color:uint=Math.round(0.3*red+0.59*green+0.11*blue);
+					var cc:uint=c[color];
+					if (cc>0) {
+						color=0xffffff;
+					} else {
+						color=0x000000;
+					}
+					outB.setPixel(i,j,color);
+				}//end of for0
+			}//end of for1
+
+			var outT:BitmapData=outB.clone();//Edge Image
+
+			for (i=1; i<=w-1; i++) {
+				for (j=1; j<=h-1; j++) {
+					var pixelValue1:uint=outB.getPixel(i,j);
+					if (pixelValue1==0) {
+						var n1:uint=outB.getPixel(i+1,j);
+						var n2:uint=outB.getPixel(i,j+1);
+						var n3:uint=outB.getPixel(i-1,j);
+						var n4:uint=outB.getPixel(i,j-1);
+						var n5:uint=outB.getPixel(i-1,j-1);
+						var n6:uint=outB.getPixel(i+1,j+1);
+						var n7:uint=outB.getPixel(i+1,j-1);
+						var n8:uint=outB.getPixel(i-1,j+1);
+						if (n1+n2+n3+n4+n5+n6+n7+n8==0) {
+							outT.setPixel(i,j,0xffffff);
+						}//end of if (n1+n2+n3+n4+n5+n6+n7+n8==0)
+					}//end of if (pixelValue1==0)
+				}//end of for0
+			}//end of for1
+
+			addChild(new Bitmap(outB));
+			addChild(new Bitmap(outT));
+			this.getChildAt(0).y=h;
+			//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TIMELINE CODES END
+			//------------------------------------------------
+		}//end of function IBET_Test_Timeline_Class
+	}//end of class
+}//end of package
