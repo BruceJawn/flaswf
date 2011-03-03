@@ -235,9 +235,9 @@ call:print;
 
 === BSCompiler:===
 The compiler for BScript. It compiles *.bs- BScript source files to *.bsc- bytecodes for BScript Virtual Machine.
-=== The *.bs file format:===
+==== The *.bs file format:====
 Source files of BScript, generally a text file.
-=== The *.bsc file format:===
+==== The *.bsc file format:====
 Compiled *.bs file in binary byte format.
 
 The structure:
