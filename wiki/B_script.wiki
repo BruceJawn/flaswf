@@ -9,8 +9,8 @@ Simple script engine.
 ||_Beta_|| 
 
 == Description: ==
-Assembly-like Script Engine for Flash games. 
-
+Assembly-like Script Engine for Flash games.
+Programming Language designed to be simple and portable.
 == Features: ==
 
 == Todos: ==
@@ -24,13 +24,129 @@ Assembly-like Script Engine for Flash games.
 ||~~Closed Source/Free~~||
 
 == Labels: ==
-   * languages
-   * tools
+   * languages C, AS3, HaXe
+   * tools Alchemy, HaXe
 == Pics: ==
 
 == Demo: ==
 
 == Source: ==
+
+== DOC: ==
+
+This page is still under construction.
+=== BScript:===
+The scripting/programming language.
+==== Symbols:====
+*||:||
+#description: Bytecode indicator.
+#usage:
+{{{
+newint:MyInt,+1234;
+}}}
+*||,||
+#description: Parameters seperator.
+#usage:
+{{{
+newint:MyInt,+1234;
+}}}
+*||;||
+#description: End of a bytecode.
+#usage:
+{{{
+newint:MyInt,+1234;
+}}}
+*||"||
+#description: Begine/End of a string.
+#usage:
+{{{
+"This Is A String";
+}}}
+
+
+*||+||
+#description: Positive number indicator.
+#usage:
+{{{
+newint:MyPInt,+1234;
+}}}
+
+*||-||
+#description: Negative number indicator.
+#usage:
+{{{
+newflt:MyNFlt,-1234.4321;
+}}}
+
+
+*||{||
+#description: Begine of a label block.
+#usage:
+{{{
+label:MyLabelName
+{
+}
+}}}
+
+*||}||
+#description: End of a label block.
+#usage:
+{{{
+label:MyLabelName
+{
+}
+}}}
+*||/*||
+#description: Begine of a comment.
+#usage:
+{{{
+/*This is 
+a comment*/
+}}}
+*||*/||
+#description: End of a comment.
+#usage:
+{{{
+/*This is 
+a comment*/
+}}}
+
+
+
+==== KeyWords:====
+*||newint||
+#description:
+#usage:
+{{{
+newint:
+}}}
+*||setint||
+*||delint||
+
+*||newflt||
+*||setflt||
+*||delflt||
+
+*||newstr||
+*||setstr||
+*||delstr||
+
+*||setloci||
+*||setlocf||
+*||setlocs||
+
+*||goto||
+*||ifgoto||
+*||call||
+*||print||
+
+
+=== BSCompiler:===
+The compiler for BScript. It compiles *.bs- BScript source files to *.bsc- bytecodes for BScript Virtual Machine.
+=== BSVM:===
+The Virtual Machine of BScript, which can execute *.bsc bytecodes.
+
+
 
 == Blog Posts: ==
 
