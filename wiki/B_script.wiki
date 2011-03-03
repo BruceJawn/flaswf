@@ -185,12 +185,12 @@ setlocs:2,locs1;
 goto:MyLabelName;
 }}}
 
- * ||ifgoto||
+ * ||ifto||
  # *Description:* If the flag loci2>0, jump to a specific label.
  # *Usage:*
 {{{
 setloci:2,+1;
-ifgoto:MyLabelName;
+ifto:MyLabelName;
 }}}
 
 There are some build in functions which can be called by "call:function".
@@ -320,9 +320,9 @@ The ByteCodes:
 #define BC_stoi 0x42
 #define BC_itos 0x43
 
-#define BC_goto  0x50
-#define BC_ifgoto0x51
-#define BC_call  0x52
+#define BC_goto 0x50
+#define BC_ifto 0x51
+#define BC_call 0x52
 }}}
 === BSVM:===
 The Virtual Machine of BScript, which can execute *.bsc bytecodes.
