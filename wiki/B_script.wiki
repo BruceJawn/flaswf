@@ -129,7 +129,7 @@ newint:MyInt,+1234;
 setint:MyInt,-4321;
 }}}
  * ||delint||
- # *Description:* Delete a int type variable.
+ # *Description:* Delete an int type variable.
  # *Usage:*
 {{{
 delint:MyInt;
