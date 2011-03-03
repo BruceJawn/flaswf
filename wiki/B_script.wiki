@@ -38,9 +38,9 @@ This page is still under construction.
 === BScript:===
 The scripting/programming language.
 ==== Symbols:====
-* ||:||
-# description: Bytecode indicator.
-# usage:
+ * ||:||
+ # description: Bytecode indicator.
+ # usage:
 {{{
 newint:MyInt,+1234;
 }}}
