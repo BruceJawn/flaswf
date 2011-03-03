@@ -39,60 +39,60 @@ This page is still under construction.
 The scripting/programming language.
 ==== Symbols:====
  * ||:||
- # description: Bytecode indicator.
- # usage:
+ # *Description:* Bytecode indicator.
+ # *Usage:*
 {{{
 newint:MyInt,+1234;
 }}}
 
-* ||,||
-# description: Parameters seperator.
-# usage:
+ * ||,||
+ # *Description:* Parameters seperator.
+ # *Usage:*
 {{{
 newint:MyInt,+1234;
 }}}
 
-* ||;||
-# description: End of a bytecode.
-# usage:
+ * ||;||
+ # *Description:* End of a bytecode.
+ # *Usage:*
 {{{
 newint:MyInt,+1234;
 }}}
 
-* ||"||
-#description: Begine/End of a string.
-#usage:
+ * ||"||
+ # *Description:* Begine/End of a string.
+ # *Usage:*
 {{{
 "This Is A String";
 }}}
 
 
-* ||+||
-# description: Positive number indicator.
-# usage:
+ * ||+||
+ # *Description:* Positive number indicator.
+ # *Usage:*
 {{{
 newint:MyPInt,+1234;
 }}}
 
-* ||-||
-# description: Negative number indicator.
-# usage:
+ * ||-||
+ # *Description:* Negative number indicator.
+ # *Usage:*
 {{{
 newflt:MyNFlt,-1234.4321;
 }}}
 
-* ||{||
-# description: Begine of a label block.
-# usage:
+ * ||{||
+ # *Description:* Begine of a label block.
+ # *Usage:*
 {{{
 label:MyLabelName
 {
 }
 }}}
 
-* ||}||
-# description: End of a label block.
-# usage:
+ * ||}||
+ # *Description:* End of a label block.
+ # *Usage:*
 {{{
 label:MyLabelName
 {
@@ -100,25 +100,25 @@ label:MyLabelName
 }
 }}}
 
-* ||/*||
-# description: Begine of a comment.
-# usage:
+ * ||/*||
+ # *Description:* Begine of a comment.
+ # *Usage:*
 {{{
 /*This is 
 a comment*/
 }}}
 
-* ||*/||
-# description: End of a comment.
-# usage:
+ * ||*/||
+ # *Description:* End of a comment.
+ # *Usage:*
 {{{
 /*This is 
 a comment*/
 }}}
 ==== KeyWords:====
-*||newint||
-#description:
-#usage:
+ * ||newint||
+ # *Description:*
+ # *Usage:*
 {{{
 newint:
 }}}
