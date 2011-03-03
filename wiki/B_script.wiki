@@ -101,14 +101,14 @@ label:MyLabelName
 }
 }}}
 
- * ||/*||
+ * ||{{{/*}}}||
  # *Description:* Begine of a comment.
  # *Usage:*
 {{{
 /*This is a comment*/
 }}}
 
- * ||*/||
+ * ||{{{*/}}}||
  # *Description:* End of a comment.
  # *Usage:*
 {{{
