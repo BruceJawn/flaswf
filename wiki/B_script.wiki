@@ -69,6 +69,13 @@ newint:MyInt,+1234;
 "This Is A String";
 }}}
 
+ * ||.||
+ # *Description:* Fractal part indicator of float number.
+ # *Usage:*
+{{{
+setlocf:0,-123.456;
+}}}
+
 
  * ||+||
  # *Description:* Positive number indicator.
@@ -236,7 +243,7 @@ setloci:1,+2;
 /*It should print 2.*/
 call:print;
 }}}
-=== Advanced Topic:===
+=== Advanced Topics:===
  * Emulate if condition:
 {{{
 call:rand;
@@ -294,7 +301,6 @@ for(int i=0; i<100; i++)
 MyArray[i]=i;
 }
 }}}
-
 {{{
 setloci:0,100;/*length of array*/
 setloci:1,1;/**/
