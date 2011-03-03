@@ -87,6 +87,7 @@ newflt:MyNFlt,-1234.4321;
 {{{
 label:MyLabelName
 {
+/*Some Codes Here.*/
 }
 }}}
 
@@ -104,8 +105,7 @@ label:MyLabelName
  # *Description:* Begine of a comment.
  # *Usage:*
 {{{
-/*This is 
-a comment*/
+/*This is a comment*/
 }}}
 
  * ||*/||
@@ -117,31 +117,110 @@ a comment*/
 }}}
 ==== KeyWords:====
  * ||newint||
- # *Description:*
+ # *Description:* Declare a new int type variable.
  # *Usage:*
 {{{
-newint:
+newint:MyInt,+1234;
 }}}
-*||setint||
-*||delint||
+ * ||setint||
+ # *Description:* Set values of int type variable.
+ # *Usage:*
+{{{
+setint:MyInt,-4321;
+}}}
+ * ||delint||
+ # *Description:* Delete a int type variable.
+ # *Usage:*
+{{{
+delint:MyInt;
+}}}
 
-*||newflt||
-*||setflt||
-*||delflt||
+ * ||newflt||
+ * ||setflt||
+ * ||delflt||
 
-*||newstr||
-*||setstr||
-*||delstr||
+ * ||newstr||
+ * ||setstr||
+ * ||delstr||
 
-*||setloci||
-*||setlocf||
-*||setlocs||
+There are 9 build in local variables that you can use directly without declaration.
 
-*||goto||
-*||ifgoto||
-*||call||
-*||print||
+The variables are:
+||Int type(3)||loci0:Use as input||loci1:Use as the second parameter  or flag||loci2: Use as output||
 
+||Float type(3)||locf0:Use as input||locf1:Use as the second parameter or flag||locf2: Use as output||
+
+||String type(3)||locs0:Use as input||locs1:Use as the second parameter or flag||locs2: Use as output||
+
+
+ * ||setloci||
+ # *Description:* Set the vaule of a local int type variable.
+ # *Usage:*
+{{{
+setloci:0,123;
+}}}
+
+ * ||setlocf||
+ * ||setlocs||
+ # *Description:* Set the vaule of a local string type variable.
+ # *Usage:*
+{{{
+setlocs:1,"MyString";
+}}}
+
+ * ||label||
+ # *Description:* Declare a label.
+ # *Usage:*
+{{{
+label:MyLabelName
+{
+setlocs:2,locs1;
+}
+}}}
+
+ * ||goto||
+ # *Description:* Jump to a specific label.
+ # *Usage:*
+{{{
+goto:MyLabelName;
+}}}
+
+ * ||ifgoto||
+ # *Description:* If the flag loci2>0, jump to a specific label.
+ # *Usage:*
+{{{
+setloci:2,+1;
+ifgoto:MyLabelName;
+}}}
+
+There are some build in functions which can be called by "call:function".
+Some build in functions are 
+||add||sub||mul||div||
+||itof||ftoi||itos||stoi||
+||print||
+ * ||call||
+ # *Description:* Call a build in function.
+ # *Usage:*
+{{{
+/*Pass +1 as the first parameter for function add*/
+setloci:0,+1;
+/*Pass +1 as the second parameter for function add*/
+setloci:1,+1;
+/*return locint2=locint0+locint1*/
+call:add;
+/*
+Pass +0 as the second parameter for function print,
+which means print a int type local variable.
+*/
+setloci:0,+0;
+/*
+Pass +2 as the second parameter for function print,
+which means print the int type local variable locint2.
+*/
+setloci:1,+2;
+/*It should print 2.*/
+call:print;
+}}}
 
 === BSCompiler:===
 The compiler for BScript. It compiles *.bs- BScript source files to *.bsc- bytecodes for BScript Virtual Machine.
