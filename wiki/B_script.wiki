@@ -198,8 +198,7 @@ ifto:MyLabelName;
 
 There are some build in functions which can be called by "call:function".
 The build in functions can be extended by user.
-
-Some build in functions are 
+Some build in functions are:
 ||addi||subi||muli||divi||
 ||addf||subf||mulf||divf||
 ||itof||ftoi||itos||stoi||
@@ -334,12 +333,10 @@ The Virtual Machine of BScript, which can execute *.bsc bytecodes.
 {{{
 
 }}}
-
  * ||Dynamic Memory||
 {{{
 
 }}}
- 
  * ||Pause:State||
  * ||Run:State||
  * ||Stop:State||
