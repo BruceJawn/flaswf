@@ -38,25 +38,28 @@ This page is still under construction.
 === BScript:===
 The scripting/programming language.
 ==== Symbols:====
-*||:||
-#description: Bytecode indicator.
-#usage:
+* ||:||
+# description: Bytecode indicator.
+# usage:
 {{{
 newint:MyInt,+1234;
 }}}
-*||,||
-#description: Parameters seperator.
-#usage:
+
+* ||,||
+# description: Parameters seperator.
+# usage:
 {{{
 newint:MyInt,+1234;
 }}}
-*||;||
-#description: End of a bytecode.
-#usage:
+
+* ||;||
+# description: End of a bytecode.
+# usage:
 {{{
 newint:MyInt,+1234;
 }}}
-*||"||
+
+* ||"||
 #description: Begine/End of a string.
 #usage:
 {{{
@@ -64,55 +67,54 @@ newint:MyInt,+1234;
 }}}
 
 
-*||+||
-#description: Positive number indicator.
-#usage:
+* ||+||
+# description: Positive number indicator.
+# usage:
 {{{
 newint:MyPInt,+1234;
 }}}
 
-*||-||
-#description: Negative number indicator.
-#usage:
+* ||-||
+# description: Negative number indicator.
+# usage:
 {{{
 newflt:MyNFlt,-1234.4321;
 }}}
 
-
-*||{||
-#description: Begine of a label block.
-#usage:
+* ||{||
+# description: Begine of a label block.
+# usage:
 {{{
 label:MyLabelName
 {
 }
 }}}
 
-*||}||
-#description: End of a label block.
-#usage:
+* ||}||
+# description: End of a label block.
+# usage:
 {{{
 label:MyLabelName
 {
+/*Some Codes Here.*/
 }
 }}}
-*||/*||
-#description: Begine of a comment.
-#usage:
-{{{
-/*This is 
-a comment*/
-}}}
-*||*/||
-#description: End of a comment.
-#usage:
+
+* ||/*||
+# description: Begine of a comment.
+# usage:
 {{{
 /*This is 
 a comment*/
 }}}
 
-
-
+* ||*/||
+# description: End of a comment.
+# usage:
+{{{
+/*This is 
+a comment*/
+}}}
 ==== KeyWords:====
 *||newint||
 #description:
