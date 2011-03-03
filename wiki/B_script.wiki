@@ -236,7 +236,86 @@ setloci:1,+2;
 /*It should print 2.*/
 call:print;
 }}}
+=== Advanced Topic:===
+ * Emulate if condition:
+{{{
+call:rand;
+setlocf:0,0.5;
+setlocf:1,locf2;
+call:subf;
+/*emulate if*/
+ifto:MyLabel0;
+label:MyLabel0
+{
+setlocs0:"The random number is less than 0.5!";
+call:print;
+}
+/*emulate else*/
+setlocf:0,0;
+setlocf:1,locf2;
+call:subf;
+ifto:MyLabel1;
+label:MyLabel1
+{
+setlocs0:"The random number is greater than 0.5!";
+call:print;
+}
+}}}
+ * Emulate for/while loop:
+{{{
+for(int i=0; i<100; i++)
+{
+print(i);
+}
+int i=100;
+while(i--)
+{
+print(i);
+}
+}}}
+{{{
+setloci:0,100;
+goto:Loop
+label:Loop{
+setloci:0,loci2;
+setloci:1,0;
+call:print;
+setloci:1,1;
+call:sub;
+ifto:Loop;
+}
+}}}
 
+ * Emulate Array:
+{{{
+var MyArray=[];
+for(int i=0; i<100; i++)
+{
+MyArray[i]=i;
+}
+}}}
+
+{{{
+setloci:0,100;/*length of array*/
+setloci:1,1;/**/
+
+goto:Loop
+label:Loop{
+setloci:0,loci2;/*put the subed length(current array index) from loci2 to loci0*/
+call:itos;/*conver loci0(current array index) to string*/
+
+setlocs:0,MyArray;/*Array name*/
+setlocs:1,locstr2;
+call:cat;/*NewArrayChildName=MyArray+index*/
+
+newint:locs2,loci0;/*MyArray+index=loci0*/
+call:sub;/*loci2=loci0-loci1=loci0--*/
+ifto:Loop;
+}}}
+
+ * Emulate Functions:
+{{{
+}}}
 === BSCompiler:===
 The compiler for BScript. It compiles *.bs- BScript source files to *.bsc- bytecodes for BScript Virtual Machine.
 ==== The *.bs file format:====
