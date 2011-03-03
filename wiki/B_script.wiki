@@ -201,6 +201,7 @@ Some build in functions are
 ||cat||cmp||
 ||print||
 The build in functions can be extended by user.
+
  * ||call||
  # *Description:* Call a build in function.
 The first parameter is locint0 or locflt0 or locstr0,
@@ -233,12 +234,13 @@ call:print;
 }}}
 
 === BSCompiler:===
+The compiler for BScript. It compiles *.bs- BScript source files to *.bsc- bytecodes for BScript Virtual Machine.
 === The *.bs file format:===
 Source files of BScript, generally a text file.
 === The *.bsc file format:===
 Compiled *.bs file in binary byte format.
 
-The structer:
+The structure:
 {{{
 Constant Pool
 {
@@ -295,11 +297,48 @@ Labels
 ...
 }
 }}}
-The compiler for BScript. It compiles *.bs- BScript source files to *.bsc- bytecodes for BScript Virtual Machine.
+The ByteCodes:
+{{{
+#define BC_newint 0x00
+#define BC_delint 0x01
+#define BC_setint 0x02
+
+#define BC_newflt 0x10
+#define BC_delflt 0x11
+#define BC_setflt 0x12
+
+#define BC_newstr 0x20
+#define BC_delstr 0x21
+#define BC_setstr 0x22
+
+#define BC_setloci 0x30
+#define BC_setlocf 0x31
+#define BC_setlocs 0x32
+
+#define BC_itof 0x40
+#define BC_ftoi 0x41
+#define BC_stoi 0x42
+#define BC_itos 0x43
+
+#define BC_goto  0x50
+#define BC_ifgoto0x51
+#define BC_call  0x52
+}}}
 === BSVM:===
 The Virtual Machine of BScript, which can execute *.bsc bytecodes.
+ * ||Static Memory||
+{{{
 
+}}}
 
+ * ||Dynamic Memory||
+{{{
+
+}}}
+ 
+ * ||Pause:State||
+ * ||Run:State||
+ * ||Stop:State||
 
 == Blog Posts: ==
 
