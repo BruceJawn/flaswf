@@ -195,11 +195,21 @@ ifgoto:MyLabelName;
 
 There are some build in functions which can be called by "call:function".
 Some build in functions are 
-||add||sub||mul||div||
+||addi||subi||muli||divi||
+||addf||subf||mulf||divf||
 ||itof||ftoi||itos||stoi||
+||cat||cmp||
 ||print||
+The build in functions can be extended by user.
  * ||call||
  # *Description:* Call a build in function.
+The first parameter is locint0 or locflt0 or locstr0,
+
+the second one is locint1 or locflt1 or locstr1,
+
+and the returned value will be stored in locint2 or locflt2 or locstr2.
+
+
  # *Usage:*
 {{{
 /*Pass +1 as the first parameter for function add*/
@@ -223,6 +233,68 @@ call:print;
 }}}
 
 === BSCompiler:===
+=== The *.bs file format:===
+Source files of BScript, generally a text file.
+=== The *.bsc file format:===
+Compiled *.bs file in binary byte format.
+
+The structer:
+{{{
+Constant Pool
+{
+   ConstInts
+   {
+   ConstInt0:Int;
+   ConstInt1:Int;
+   ...
+   }
+   ConstFlts
+   {
+   ConstFlt0:Float;
+   ConstFlt1:Float;
+   ...
+   }
+   ConstStrs
+   {
+   ConstStr0:String;
+   ConstStr1:String;
+   ...
+   } 
+}
+Labels
+{
+   TheMainLabel
+   {
+      LabelNameIndex:Int4;
+      LabelLength:Int4;
+      ByteCodes
+      {   
+          ByteCode0:Char;
+          Parameter0Index:Int4;  
+          (Parameter0Index:Int4;)
+          ByteCode1:Char;
+          Parameter0Index:Int4;  
+          (Parameter0Index:Int4;)
+          ...
+      }
+   }  
+   SubLabel0
+   {
+      LabelNameIndex:Int4;
+      LabelLength:Int4;
+      ByteCodes
+      {
+      }
+   }
+   SubLabel1
+   {
+      ByteCodes
+      {
+      }
+   }
+...
+}
+}}}
 The compiler for BScript. It compiles *.bs- BScript source files to *.bsc- bytecodes for BScript Virtual Machine.
 === BSVM:===
 The Virtual Machine of BScript, which can execute *.bsc bytecodes.
