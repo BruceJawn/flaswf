@@ -37,6 +37,7 @@ Programming Language designed to be simple and portable.
 This page is still under construction.
 
 This doc is released in ||GNU GPLv3|| license.
+
 === BScript:===
 The scripting/programming language.
 ==== Symbols:====
