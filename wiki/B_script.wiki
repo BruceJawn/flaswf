@@ -133,23 +133,24 @@ a comment*/
 ==== KeyWords:====
  * ||newint||
  # *Description:* Declare a new int type variable.
-                  input(2):
-                 {para0:an int type variable name
-or the string of the variable name
-or a string type variable which contains an int type variable name
-as the new delcared int type variable name,
-                  para1:an int number or an int type variable}
+ # input(2):
+   # para0: the string of the variable name
+            or a string type variable which contains an int type variable name
+            as the new delcared int type variable name
+   # para1: an int number or an int type variable
+            or a string which is an int type variable name
+            or a string type variable which contains an int type variable name
  # *Usage:*
 {{{
 newint:"MyInt",+1234;
 }}}
  * ||setint||
  # *Description:* Set values of int type variable.
-                  input(2):
-                 {para0:an int type variable name
-or the string of the variable name
-or a string type variable which contains an int type variable name,
-                  para1:an int number or an int type variable}
+ # Input(2):
+   # para0: an int type variable
+            or the string of the variable name
+            or a string type variable which contains an int type variable name
+   # para1:an int number or an int type variable
  # *Usage:*
 {{{
 setint:MyInt,-4321;
