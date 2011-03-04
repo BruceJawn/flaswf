@@ -38,6 +38,9 @@ This page is still under construction.
 
 This doc is released under *[http://creativecommons.org/licenses/by/3.0/ Creative Commons Attribution 3.0 License]_*.
 
+Todos:
+use "" to indicate variable name string when declaring/setting.
+no "" means a variable. First time must use ""!
 === BScript:===
 The scripting/programming language.
 ==== Symbols:====
