@@ -36,7 +36,7 @@ Programming Language designed to be simple and portable.
 
 This page is still under construction.
 
-This doc is released under *_[Creative Commons Attribution 3.0 License. http://creativecommons.org/licenses/by/3.0/]_*
+This doc is released under *[http://creativecommons.org/licenses/by/3.0/ Creative Commons Attribution 3.0 License.]_*
 
 === BScript:===
 The scripting/programming language.
