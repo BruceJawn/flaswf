@@ -507,7 +507,7 @@ The ByteCodes:
 #define BC_call 0x52
 }}}
 === BSVM:===
-The Virtual Machine of BScript, which can execute *.bsc bytecodes.
+The Virtual Machine of BScript, which can execute {{{*}}}.bsc bytecodes.
  * ||Static Memory||
 {{{
 
