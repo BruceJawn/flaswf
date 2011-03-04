@@ -313,15 +313,16 @@ call:locstr0;
 }}}
 
 === Advanced Topics:===
- * Flexiable variable names: There are 3 ways of calling a int or a float variable.
+ * Flexiable variable names: 
+   # There are 3 ways of calling a int or a float variable.
 
-   * 0: use the variable (name). {{{MyInt}}} 
+   # 0: use the variable (name). {{{MyInt}}} 
 
-   * 1: use the variable name string. {{{"MyInt"}}}
+   # 1: use the variable name string. {{{"MyInt"}}}
 
-   * 2: use a string type variable which contains a variable name string. {{{setstr:mystr,"MyInt"; mystr}}}
+   # 2: use a string type variable which contains a variable name string. {{{setstr:mystr,"MyInt"; mystr}}}
 
-   * The only way to call a string type variable is to use its name.
+   # The only way to call a string type variable is to use its name.
  * Emulate if condition:
  # Pseudo Code:
 {{{
