@@ -65,11 +65,12 @@ newint:"MyInt",+1234;
 newint:"MyInt",+1234;
 }}}
 
- * ||"||
+ * ||"||'||
  # *Description:* Begine/End of a string.
  # *Usage:*
 {{{
 "This Is A String";
+'This Is A String';
 }}}
 
  * ||.||
@@ -79,12 +80,12 @@ newint:"MyInt",+1234;
 setlocf:0,-123.456;
 }}}
 
-
  * ||+||
- # *Description:* Positive number indicator.
+ # *Description:* Positive number indicator.(can be omitted)
  # *Usage:*
 {{{
 newint:"MyPInt",+1234;
+newint:"MyPInt",1234;
 }}}
 
  * ||-||
@@ -128,15 +129,27 @@ label:MyLabelName
 /*This is 
 a comment*/
 }}}
+
 ==== KeyWords:====
  * ||newint||
  # *Description:* Declare a new int type variable.
+                  input(2):
+                 {para0:an int type variable name
+or the string of the variable name
+or a string type variable which contains an int type variable name
+as the new delcared int type variable name,
+                  para1:an int number or an int type variable}
  # *Usage:*
 {{{
 newint:"MyInt",+1234;
 }}}
  * ||setint||
  # *Description:* Set values of int type variable.
+                  input(2):
+                 {para0:an int type variable name
+or the string of the variable name
+or a string type variable which contains an int type variable name,
+                  para1:an int number or an int type variable}
  # *Usage:*
 {{{
 setint:MyInt,-4321;
@@ -149,12 +162,46 @@ delint:MyInt;
 }}}
 
  * ||newflt||
+ # *Description:* Declare a float type variable.
+ # *Usage:*
+{{{
+newflt:"MyFlt",12.34;
+}}}
+
  * ||setflt||
+ # *Description:* Set values of a float type variable.
+ # *Usage:*
+{{{
+setflt:MyFlt,-43.21;
+}}}
+
  * ||delflt||
+ # *Description:* Delete a float type variable.
+ # *Usage:*
+{{{
+delflt:MyFlt;
+}}}
 
  * ||newstr||
+ # *Description:* Declare a string type variable.
+ # *Usage:*
+{{{
+newstr:"MyStr","This is a string.";
+}}}
+
  * ||setstr||
+ # *Description:* Set values of a string type variable.
+ # *Usage:*
+{{{
+setstr:MyStr,"MyStr changed!";
+}}}
+
  * ||delstr||
+ # *Description:* Delete a string type variable.
+ # *Usage:*
+{{{
+delstr:MyStr;
+}}}
 
 There are 9 build in local variables that you can use directly without declaration.
 
@@ -165,7 +212,6 @@ The variables are:
 
 ||String type(3)||locs0:Use as input||locs1:Use as the second parameter or flag||locs2: Use as output||
 
-
  * ||setloci||
  # *Description:* Set the vaule of a local int type variable.
  # *Usage:*
@@ -174,11 +220,17 @@ setloci:0,123;
 }}}
 
  * ||setlocf||
+ # *Description:* Set the vaule of a local float type variable.
+ # *Usage:*
+{{{
+setlocf:1,123.456;
+}}}
+
  * ||setlocs||
  # *Description:* Set the vaule of a local string type variable.
  # *Usage:*
 {{{
-setlocs:1,"MyString";
+setlocs:2,"MyString";
 }}}
 
  * ||label||
@@ -195,7 +247,8 @@ setlocs:2,locs1;
  # *Description:* Jump to a specific label.
  # *Usage:*
 {{{
-goto:MyLabelName;
+goto:"MyLabelName";
+goto:MyLabel;/*MyLabel is a string type variable*/
 }}}
 
  * ||ifto||
@@ -203,7 +256,7 @@ goto:MyLabelName;
  # *Usage:*
 {{{
 setloci:2,+1;
-ifto:MyLabelName;
+ifto:"MyLabelName";
 }}}
 
 There are some build in functions which can be called by "call:function".
@@ -245,6 +298,12 @@ which means print the int type local variable locint2.
 setloci:1,+2;
 /*It should print 2.*/
 call:print;
+}}}
+
+{{{
+/*Use a string variable as input*/
+setlocs:0,"add";
+call:locstr0;
 }}}
 === Advanced Topics:===
  * Emulate if condition:
