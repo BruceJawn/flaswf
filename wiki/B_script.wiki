@@ -350,6 +350,7 @@ float myp2=3.3;
 float varout=Myfunction(myp0,myp1,myp2);
 }}}
  # BScript:
+ The direct way:
 {{{
 newint:myp0,1;
 newint:myp1,2;
@@ -370,8 +371,38 @@ call:mutf;
 }
 setflt:varout,locflt2;
 }}}
+ The indirect way:
+{{{
+newint:myp0,1;
+newint:myp1,2;
+newflt:myp2,3.3;
+newflt:varout,0.0;
+
+newstr:OutputName,"";
+setstr:OutputName,"varout";
+
+setlocs:0,"myp0";
+setlocs:1,"myp1";
+setlocs:2,"myp2";
+
+goto:Myfunction;
+label:Myfunction
+{
+setloci:0,locstr0;
+setloci:1,locstr1;
+setlocf:0,locstr2;
+
+call:addi;
+setloci:0,locint2;
+call:itof;
+setlocf:1:locflt2;
+call:mutf;
+
+setflt:OutputName,locflt2;
+}
+}}}
 === ~~BSParser:~~===
-*Deprecated.*
+(*Deprecated.*)
 
 Evaluate {{{*}}}.bs source code without compilation.
 === BSCompiler:===
