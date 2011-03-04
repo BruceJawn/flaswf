@@ -455,10 +455,10 @@ Labels
       {   
           ByteCode0:Char;
           Parameter0Index:Int4;  
-          (Parameter0Index:Int4;)
+          (Parameter1Index:Int4;)
           ByteCode1:Char;
           Parameter0Index:Int4;  
-          (Parameter0Index:Int4;)
+          (Parameter1Index:Int4;)
           ...
       }
    }  
