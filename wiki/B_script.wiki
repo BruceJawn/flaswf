@@ -36,7 +36,7 @@ Programming Language designed to be simple and portable.
 
 This page is still under construction.
 
-This doc is released under *_GNU GPLv3_* license.
+This doc is released under *_[Creative Commons Attribution 3.0 License. http://creativecommons.org/licenses/by/3.0/]_*
 
 === BScript:===
 The scripting/programming language.
@@ -322,15 +322,16 @@ ifto:Loop;
  * Emulate Functions:
 {{{
 }}}
-=== ~BSParser:~===
-Evaluate '*'.bs source code without compilation.
+=== ~~BSParser:~~===
+Evaluate {{{*}}}.bs source code without compilation.
+
 *Deprecated.*
 === BSCompiler:===
-The compiler for BScript. It compiles '*'.bs- BScript source files to '*'.bsc- bytecodes for BScript Virtual Machine.
-==== The '*'.bs file format:====
+The compiler for BScript. It compiles {{{*}}}.bs- BScript source files to {{{*}}}.bsc- bytecodes for BScript Virtual Machine.
+==== The {{{*}}}.bs file format:====
 Source files of BScript, generally a text file.
-==== The '*'.bsc file format:====
-Compiled '*'.bs file in binary byte format.
+==== The {{{*}}}.bsc file format:====
+Compiled {{{*}}}.bs file in binary bytes format.
 
 The structure:
 {{{
