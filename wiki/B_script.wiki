@@ -150,7 +150,9 @@ newint:"MyInt",+1234;
    # para0: an int type variable
             or the string of the variable name
             or a string type variable which contains an int type variable name
-   # para1:an int number or an int type variable
+   # para1: an int number or an int type variable
+            or a string which is an int type variable name
+            or a string type variable which contains an int type 
  # *Usage:*
 {{{
 setint:MyInt,-4321;
@@ -306,7 +308,17 @@ call:print;
 setlocs:0,"add";
 call:locstr0;
 }}}
+
 === Advanced Topics:===
+ * Flexiable variable names: There are 3 ways of calling a int or a float variable.
+
+0: use the variable (name). {{{MyInt}}} 
+
+1: use the variable name string. {{{"MyInt"}}}
+
+2: use a string type variable which contains a variable name string. {{{setstr:mystr,"MyInt"; mystr}}}
+
+The only way to call a string type variable is to use its name.
  * Emulate if condition:
  # Pseudo Code:
 {{{
