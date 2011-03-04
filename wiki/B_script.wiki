@@ -350,7 +350,7 @@ float myp2=3.3;
 float varout=Myfunction(myp0,myp1,myp2);
 }}}
  # BScript:
- The direct way:
+   # The direct way:
 {{{
 newint:myp0,1;
 newint:myp1,2;
@@ -371,7 +371,7 @@ call:mutf;
 }
 setflt:varout,locflt2;
 }}}
- The indirect way:
+   # The indirect way:
 {{{
 newint:myp0,1;
 newint:myp1,2;
