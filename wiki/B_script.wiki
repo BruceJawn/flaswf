@@ -245,7 +245,7 @@ call:print;
 }}}
 === Advanced Topics:===
  * Emulate if condition:
-Pseudo Code:
+ # Pseudo Code:
 {{{
 if(rand()<0.5)
 {
@@ -256,7 +256,7 @@ else
 print("The random number is greater than 0.5!");
 }
 }}}
-BScript:
+ # BScript:
 {{{
 call:rand;
 setlocf:0,0.5;
@@ -281,7 +281,7 @@ call:print;
 }
 }}}
  * Emulate for/while loop:
-Pseudo Code:
+ # Pseudo Code:
 {{{
 for(int i=0; i<100; i++)
 {
@@ -294,7 +294,7 @@ while(i--)
 print(i);
 }
 }}}
-BScript:
+ # BScript:
 {{{
 setloci:0,100;
 goto:Loop
@@ -309,7 +309,7 @@ ifto:Loop;
 }}}
 
  * Emulate Array:
-Pseudo Code:
+ # Pseudo Code:
 {{{
 var MyArray=[];
 for(int i=0; i<100; i++)
@@ -317,7 +317,7 @@ for(int i=0; i<100; i++)
 MyArray[i]=i;
 }
 }}}
-BScript:
+ # BScript:
 {{{
 setloci:0,100;/*length of array*/
 setloci:1,1;/**/
@@ -337,7 +337,7 @@ ifto:Loop;
 }}}
 
  * Emulate Functions:
-Pseudo Code:
+ # Pseudo Code:
 {{{
 function Myfunction(para0:int,para1:int,para2:float):float
 {
@@ -349,7 +349,7 @@ int myp1=2;
 float myp2=3.3;
 float varout=Myfunction(myp0,myp1,myp2);
 }}}
-BScript:
+ # BScript:
 {{{
 newint:myp0,1;
 newint:myp1,2;
@@ -371,9 +371,9 @@ call:mutf;
 setflt:varout,locflt2;
 }}}
 === ~~BSParser:~~===
-Evaluate {{{*}}}.bs source code without compilation.
-
 *Deprecated.*
+
+Evaluate {{{*}}}.bs source code without compilation.
 === BSCompiler:===
 The compiler for BScript. It compiles {{{*}}}.bs- BScript source files to {{{*}}}.bsc- bytecodes for BScript Virtual Machine.
 ==== The {{{*}}}.bs file format:====
