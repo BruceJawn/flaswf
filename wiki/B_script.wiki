@@ -378,7 +378,7 @@ setflt:varout,locflt2;
 {{{
 newint:"myp0",1;
 newint:"myp1",2;
-newflt:"myp2',3.3;
+newflt:"myp2",3.3;
 newflt:"varout",0.0;
 
 newstr:"OutputName","";
