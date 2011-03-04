@@ -36,7 +36,7 @@ Programming Language designed to be simple and portable.
 
 This page is still under construction.
 
-This doc is released under *[http://creativecommons.org/licenses/by/3.0/ Creative Commons Attribution 3.0 License.]_*
+This doc is released under *[http://creativecommons.org/licenses/by/3.0/ Creative Commons Attribution 3.0 License]_*.
 
 === BScript:===
 The scripting/programming language.
@@ -245,6 +245,18 @@ call:print;
 }}}
 === Advanced Topics:===
  * Emulate if condition:
+Pseudo Code:
+{{{
+if(rand()<0.5)
+{
+print("The random number is less than 0.5!");
+}
+else
+{
+print("The random number is greater than 0.5!");
+}
+}}}
+BScript:
 {{{
 call:rand;
 setlocf:0,0.5;
@@ -269,17 +281,20 @@ call:print;
 }
 }}}
  * Emulate for/while loop:
+Pseudo Code:
 {{{
 for(int i=0; i<100; i++)
 {
 print(i);
 }
+/*or*/
 int i=100;
 while(i--)
 {
 print(i);
 }
 }}}
+BScript:
 {{{
 setloci:0,100;
 goto:Loop
@@ -294,6 +309,7 @@ ifto:Loop;
 }}}
 
  * Emulate Array:
+Pseudo Code:
 {{{
 var MyArray=[];
 for(int i=0; i<100; i++)
@@ -301,6 +317,7 @@ for(int i=0; i<100; i++)
 MyArray[i]=i;
 }
 }}}
+BScript:
 {{{
 setloci:0,100;/*length of array*/
 setloci:1,1;/**/
@@ -320,7 +337,38 @@ ifto:Loop;
 }}}
 
  * Emulate Functions:
+Pseudo Code:
 {{{
+function Myfunction(para0:int,para1:int,para2:float):float
+{
+float output=(float)(para0+para1)*para2;
+return output;
+}
+int myp0=1;
+int myp1=2;
+float myp2=3.3;
+float varout=Myfunction(myp0,myp1,myp2);
+}}}
+BScript:
+{{{
+newint:myp0,1;
+newint:myp1,2;
+newflt:myp2,3.3;
+newflt:varout,0.0;
+
+setloci:0,myp0;
+setloci:1,myp1;
+setlocf:0,myp2;
+goto:Myfunction;
+label:Myfunction
+{
+call:addi;
+setloci:0,locint2;
+call:itof;
+setlocf:1:locflt2;
+call:mutf;
+}
+setflt:varout,locflt2;
 }}}
 === ~~BSParser:~~===
 Evaluate {{{*}}}.bs source code without compilation.
@@ -339,25 +387,35 @@ Constant Pool
 {
    ConstInts
    {
+   ConstIntsCNT:Int4;
+
    ConstInt0:Int;
    ConstInt1:Int;
    ...
    }
    ConstFlts
    {
+   ConstFlsCNT:Int4;
+
    ConstFlt0:Float;
    ConstFlt1:Float;
    ...
    }
    ConstStrs
    {
+   ConstStrsCNT:Int4;
+
+   ConstStrLength0:Int4;
    ConstStr0:String;
+   
+   ConstStrLength1:Int4;
    ConstStr1:String;
    ...
    } 
 }
 Labels
 {
+   LabelsCNT:Int4;
    TheMainLabel
    {
       LabelNameIndex:Int4;
