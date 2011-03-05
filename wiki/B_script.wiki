@@ -529,11 +529,17 @@ Labels
       ByteCodes
       {   
           ByteCode0:Char;
+          Parameter0Type:Char;
+          /*0:ConstInt,1:ConstFlt,2:ConstStr,3:Variable Name*/
           Parameter0Index:Int4;  
-          (Parameter1Index:Int4;)
+          (Parameter1Type:Char;
+          Parameter1Index:Int4;)
+
           ByteCode1:Char;
+          Parameter0Type:Char;
           Parameter0Index:Int4;  
-          (Parameter1Index:Int4;)
+          (Parameter1Type:Char;
+          Parameter1Index:Int4;)
           ...
       }
    }  
