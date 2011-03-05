@@ -209,11 +209,11 @@ delstr:MyStr;
 There are 9 build in local variables that you can use directly without declaration.
 
 The variables are:
-||Int type(3)||loci0:Use as input||loci1:Use as the second parameter  or flag||loci2: Use as output||
+||Int type(3)||loci0:Use as input||loci1:Use as the second parameter||loci2: Use as output  or flag||
 
-||Float type(3)||locf0:Use as input||locf1:Use as the second parameter or flag||locf2: Use as output||
+||Float type(3)||locf0:Use as input||locf1:Use as the second parameter/input||locf2: Use as output  or flag||
 
-||String type(3)||locs0:Use as input||locs1:Use as the second parameter or flag||locs2: Use as output||
+||String type(3)||locs0:Use as input||locs1:Use as the second parameter/input||locs2: Use as output  or flag||
 
  * ||setloci||
  # *Description:* Set the vaule of a local int type variable.
