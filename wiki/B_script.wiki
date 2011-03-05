@@ -345,7 +345,7 @@ setlocs0:"The random number is less than 0.5!";
 call:print;
 }
 /*emulate else*/
-setlocf:0,0;
+setlocf:0,0.0;
 setlocf:1,locf2;
 call:subf;
 ifto:MyLabel1;
