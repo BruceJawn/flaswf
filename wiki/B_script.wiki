@@ -591,11 +591,34 @@ The ByteCodes:
 The Virtual Machine of BScript, which can execute {{{*}}}.bsc bytecodes.
  * ||Static Memory||
 {{{
+/*ConstPool*/
 
 }}}
  * ||Dynamic Memory||
 {{{
+/*Local variables and variables delcared on the fly*/
+}}}
+ * ||Find the Variable||
+{{{
+1. Read the ParameterType;
+/*0:ConstInt,1:ConstFlt,2:ConstStr,3:Variable Name*/
+2. Read the ParameterIndex; 
+3. switch(ParameterType)
+case 0: Get the ConstInt from the const pool;
 
+case 1: Get the ConstFlt from the const pool;
+
+case 2: Get the ConstStr from the const pool;
+if(Currentbytecode.ParameterType!=ConstStr)
+Get DynamicInt or DynamicFlt from the Dynamic Memory;
+
+case 3: Get the ConstStr from the const pool;
+Get DynamicInt or DynamicFlt from the Dynamic Memory;
+if(can't find DynamicInt or DynamicFlt with the name)
+{
+Get DynamicStr(name) from the Dynamic Memory;
+Get DynamicInt or DynamicFlt(name) from the Dynamic Memory;
+}
 }}}
  * ||Pause:State||
  * ||Run:State||
