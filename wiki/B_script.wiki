@@ -643,8 +643,9 @@ Run=false;
 }}}
  * ||Run:State||
 {{{
-if(Run)
-Position++;
+Run=true;
+/*if(Run)
+Position++;*/
 }}}
  * ||Stop:State||
 {{{
