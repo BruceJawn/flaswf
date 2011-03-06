@@ -612,17 +612,30 @@ case 2: Get the ConstStr from the const pool;
 if(Currentbytecode.ParameterType!=ConstStr)
 Get DynamicInt or DynamicFlt from the Dynamic Memory;
 
-case 3: Get the ConstStr from the const pool;
-Get DynamicInt or DynamicFlt from the Dynamic Memory;
-if(can't find DynamicInt or DynamicFlt with the name)
+case 3: Get the ConstStr(name) from the const pool;
+Get DynamicInt or DynamicFlt(name) from the Dynamic Memory;
+if(cannot find DynamicInt or DynamicFlt with the name)
 {
 Get DynamicStr(name) from the Dynamic Memory;
 Get DynamicInt or DynamicFlt(name) from the Dynamic Memory;
 }
 }}}
+ * ||Position||
  * ||Pause:State||
+{{{
+/*can't pause in a sublabel, only pause in the main label.*/
+Run=false;
+}}}
  * ||Run:State||
+{{{
+if(Run)
+Position++;
+}}}
  * ||Stop:State||
+{{{
+Run=false;
+Position=0;
+}}}
 
 == Blog Posts: ==
 
