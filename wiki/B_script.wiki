@@ -609,15 +609,30 @@ case 0: Get the ConstInt from the const pool;
 case 1: Get the ConstFlt from the const pool;
 
 case 2: Get the ConstStr from the const pool;
-if(Currentbytecode.ParameterType!=ConstStr)
-Get DynamicInt or DynamicFlt from the Dynamic Memory;
+            switch(Currentbytecode.ParameterType)
+            case int: Get DynamicInt from the Dynamic Memory;
+            case flt: Get DynamicFlt from the Dynamic Memory;
+            case str: /*done, since the only way to call a string variable is use its name.*/
 
-case 3: Get the ConstStr(name) from the const pool;
-Get DynamicInt or DynamicFlt(name) from the Dynamic Memory;
-if(cannot find DynamicInt or DynamicFlt with the name)
-{
-Get DynamicStr(name) from the Dynamic Memory;
-Get DynamicInt or DynamicFlt(name) from the Dynamic Memory;
+case 3:
+          Get the ConstStr from the const pool;
+          switch(Currentbytecode.ParameterType)
+          case int: 
+          Get DynamicInt from the const pool;
+          if(cannot find DynamicInt with the name)
+          {
+          Get DynamicStr(name) from the Dynamic Memory;
+          Get DynamicInt(name) from the Dynamic Memory;
+          }
+          case flt: 
+          Get DynamicFlt from the const pool;
+          if(cannot find DynamicFlt with the name)
+          {
+          Get DynamicStr(name) from the Dynamic Memory;
+          Get DynamicFlt(name) from the Dynamic Memory;
+          }
+          case str: 
+          Get DynamicStr from the Dynamic Memory;
 }
 }}}
  * ||Position||
