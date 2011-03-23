@@ -44,7 +44,7 @@ Screen.scaleY=2;
 == Demo: ==
 
 == Source: ==
-
+[http://flaswf.googlecode.com/svn/trunk/AS3_Evaldraw_En/]
 == Blog Posts: ==
-
+[http://bruce-lab.blogspot.com/2010/07/as3-eval-draw-eval-as3-drawing-api.html]
 == Links: ==
