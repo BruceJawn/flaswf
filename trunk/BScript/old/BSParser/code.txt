@@ -1,0 +1,99 @@
+/*’‚ «◊¢ Õ This is comment*/
+/*=======================================*/
+/*Test Print*/
+print: i+010;
+print: f-123.456f;/*must+f*/
+print: "test Str output";
+/*=======================================*/
+/*Test loc set*/
+setloc: int,0,+1234567;
+setloc: flt,0,-123.654321;
+/*=======================================*/
+/*Test goto and label*/
+goto: loop0001;
+label:loop0001
+{
+setloc: int,0,i+654321;
+
+/*less than, great than, le, ge, eq, ne*/
+iflt: my_int_0,i+000010; 
+/*goto loop0001.*/
+}
+/*=======================================*/
+/*Test Int*/
+newint: my_int_0,+000010;
+print: my_int_0;
+setint: my_int_0,+000000;
+print: my_int_0;
+newint: my_int_1,+6666666
+setint: my_int_0,my_int_1;
+print: my_int_0;
+/*=======================================*/
+/*Test Flt*/
+newflt: my_flt_0,-10101010.654321;
+/*=======================================*/
+/*Test Str*/
+newstr: mychar,"123456iadiash";
+print: mychar;
+
+newstr: mychar2,"Bruce Jawn";
+print:mychar2;
+setstr: mychar,mychar2;
+print:mychar;
+/*=======================================*/
+/*Test Call*/
+setloc: int,0,+25;
+setloc: int,1,+40;
+call:Addi;
+setint: my_int_0,loci_2;
+print: my_int_0;
+/*=======================================*/
+/*Test If*/
+setloc: int,0,10;
+setloc: int,1,10;
+call:Cmpi;
+label:myif
+{
+print: "goto If!";
+}
+if:loc_2,myif;
+
+setloc: int,0,0;
+if:loc_0,myif2;
+label:myif2
+{
+print: "Wrong goto If!";
+}
+/*=======================================*/
+/*Test del*/
+newint: todeli,10;
+print:"Before delete";
+print:todeli;
+deli:todeli;
+print:"After delete";
+print:todeli;
+
+newflt: todelf,20.2
+print:todelf;
+delf:todelf;
+print:todelf;
+/*Test Array*/
+/*
+newstr:myarray,"MyArray";
+newint:cnt,+10;
+goto:for
+label:for
+{
+setloc:int,0,cnt;
+setloc:int,1,+1;
+call:sub;
+setint:cnt,loc2;
+
+setloc:str,0,myarray;
+setloc:str,1,cnt;
+call:strcat;
+newint:loc2,cnt;
+
+if:cnt,for;
+}
+*/
