@@ -480,6 +480,9 @@ setflt:OutputName,locflt2;
 (*Deprecated.*)
 
 Evaluate {{{*}}}.bs source code without compilation.
+
+Source Code:
+[https://flaswf.googlecode.com/svn/trunk/BScript/old/BSParser]
 === BSCompiler:===
 The compiler for BScript. It compiles {{{*}}}.bs- BScript source files to {{{*}}}.bsc- bytecodes for BScript Virtual Machine.
 ==== The {{{*}}}.bs file format:====
