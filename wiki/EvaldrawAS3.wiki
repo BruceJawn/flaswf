@@ -24,6 +24,10 @@ Screen.scaleY=2;
 }}}
 
 == Todos: ==
+1. UI->ASwing/minibuilder
+2. vLib zip + pause load + export FD project
+3. fractal pack + example menu xml
+4. \r\n->n
 
 == License: ==
 
