@@ -19,7 +19,7 @@ Programming Language designed to be simple and portable.
 
 == License: ==
 
-||Unkown||
+||Unknown||
 ||~~Open Source/MIT~~||
 ||~~Closed Source/Free~~||
 
