@@ -1,0 +1,6 @@
+-cp ../lib
+-swf NME.swf
+-swf-version 10
+-swf-header 256:256:30:FFFFFF
+--flash-strict
+-main Groufst2NME
