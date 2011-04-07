@@ -16,6 +16,8 @@ Programming Language designed to be simple and portable.
 == Todos: ==
    * final clean up, add comments.
    * conditional compiling #if, debug print to file, i+information.
+   * visual flow editor
+   * parameter collector
 
 == License: ==
 
