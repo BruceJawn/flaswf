@@ -1,6 +1,6 @@
 <languageVersion : 1.0;>
 
-kernel untitled
+kernel Posterize
 <   namespace : "FLASWF";
     vendor : "Bruce Jawn";
     version : 1;
