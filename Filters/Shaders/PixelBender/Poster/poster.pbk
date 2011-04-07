@@ -25,8 +25,8 @@ kernel Posterize
     void
     evaluatePixel()
     {
-    float gamma=0.6; // 0.6
-    float numColors=8.0; // 8.0
+    float gamma=0.6;
+    float numColors=8.0;
     float4 c = sampleNearest(src,outCoord());
   
     c.r = pow(c.r, (gamma));
