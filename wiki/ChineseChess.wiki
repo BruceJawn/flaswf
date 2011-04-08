@@ -18,7 +18,6 @@ Optimization
 == License: ==
 
 ||Open Source/GNU GPL||
-||Closed Source/Free||
 
 == Labels: ==
    * languages
