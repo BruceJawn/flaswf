@@ -17,7 +17,7 @@ Add your content here.
 Optimization
 == License: ==
 
-||Open Source/MIT||
+||Open Source/GNU GPL||
 ||Closed Source/Free||
 
 == Labels: ==
