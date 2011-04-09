@@ -18,6 +18,7 @@ Programming Language designed to be simple and portable.
    * conditional compiling #if, debug print to file, i+information.
    * visual flow editor
    * parameter collector
+   * cbs dynamic link(dll) load into labels
 
 == License: ==
 
