@@ -13,7 +13,7 @@ package {
     import flash.display.*;
     import flash.events.*;
     import flash.net.*;
-	import flash.system.* ;
+    import flash.system.* ;
     import flash.ui.*;
     [SWF(width="640", height="480", backgroundColor="#ffffff")]
     public class Bit32toBit8 extends Sprite
@@ -63,7 +63,7 @@ package {
         
         private function Loadimage():void
         {
-			Security.loadPolicyFile("http://flaswf.googlecode.com/svn/trunk/crossdomain.xml");
+            Security.loadPolicyFile("http://flaswf.googlecode.com/svn/trunk/crossdomain.xml");
             var context:LoaderContext = new LoaderContext();
             context.checkPolicyFile = true;
             var myLoader:Loader = new Loader();
