@@ -63,7 +63,7 @@ package {
         
         private function Loadimage():void
         {
-			Security.loadPolicyFile("http://flaswf.googlecode.com/svn/trunk/crossdomain.xml");
+			     Security.loadPolicyFile("http://flaswf.googlecode.com/svn/trunk/crossdomain.xml");
             var context:LoaderContext = new LoaderContext();
             context.checkPolicyFile = true;
             var myLoader:Loader = new Loader();
