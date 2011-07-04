@@ -47,7 +47,7 @@ package {
 				var percentLoaded:Number = event.bytesLoaded/event.bytesTotal;
 				percentLoaded = Math.round(percentLoaded * 100);
 				InfoText.text = percentLoaded + "% Loaded!";//trace("Loading: "+percentLoaded+"%");
-      }
+            }
             myLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, onLoaderReady);
             myLoader.load(new URLRequest("https://flaswf.googlecode.com/svn/trunk/BitmapFont/En/lazyfont.png"), context);
             function onLoaderReady(evt:Event):void
