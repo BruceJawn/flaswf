@@ -13,10 +13,10 @@
 package {
     import flash.display.*;
     import flash.events.*;
-	  import flash.geom.*;
+    import flash.geom.*;
     import flash.net.*;
     import flash.system.* ;
-	  import flash.text.*;
+    import flash.text.*;
     import flash.ui.*;
     [SWF(width="512", height="512", backgroundColor="#ffffff")]
     public class BitmapFont extends Sprite
@@ -31,7 +31,7 @@ package {
         private var InputData:BitmapData;
         private var nImageHeight:int;
         private var nImageWidth:int; 
-		    private var InfoText:TextField = new TextField();
+        private var InfoText:TextField = new TextField();
         //====================================
         
         private function Loadimage():void
@@ -47,12 +47,12 @@ package {
 				var percentLoaded:Number = event.bytesLoaded/event.bytesTotal;
 				percentLoaded = Math.round(percentLoaded * 100);
 				InfoText.text = percentLoaded + "% Loaded!";//trace("Loading: "+percentLoaded+"%");
-            }
+      }
             myLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, onLoaderReady);
             myLoader.load(new URLRequest("https://flaswf.googlecode.com/svn/trunk/BitmapFont/En/lazyfont.png"), context);
             function onLoaderReady(evt:Event):void
             {
-				        removeChild(InfoText);
+                removeChild(InfoText);
                 InputData = Bitmap ( evt.target.content ).bitmapData;
                 nImageHeight= InputData.height;
                 nImageWidth = InputData.width;
@@ -61,7 +61,7 @@ package {
                 out = new BitmapData(nImageWidth, nImageHeight);
                 addChild(new Bitmap(out));           
                 init();
-				        show_text(100, 128, "Hello Bitmap Font!\nABDCEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz\n0123456789");
+                show_text(100, 128, "Hello Bitmap Font!\nABDCEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyz\n0123456789");
             }//end of function onLoaderReady
         }//end of function Loadimage
         //====================================
@@ -264,7 +264,7 @@ package {
 			out.threshold (out, out.rect,new Point(), "==", 0xff00ffff);
 
 		}//end of function
-    //====================================
+   //====================================
 
     }//end of class
 }//end of package
