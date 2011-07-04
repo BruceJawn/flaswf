@@ -40,13 +40,13 @@ package {
             var context:LoaderContext = new LoaderContext();
             context.checkPolicyFile = true;
             var myLoader:Loader = new Loader();
-			addChild(InfoText);
-			myLoader.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS, loadProgress);
-			function loadProgress(event:ProgressEvent):void 
-			{
-				var percentLoaded:Number = event.bytesLoaded/event.bytesTotal;
-				percentLoaded = Math.round(percentLoaded * 100);
-				InfoText.text = percentLoaded + "% Loaded!";//trace("Loading: "+percentLoaded+"%");
+            addChild(InfoText);
+            myLoader.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS, loadProgress);
+            function loadProgress(event:ProgressEvent):void 
+            {
+            var percentLoaded:Number = event.bytesLoaded/event.bytesTotal;
+            percentLoaded = Math.round(percentLoaded * 100);
+            InfoText.text = percentLoaded + "% Loaded!";//trace("Loading: "+percentLoaded+"%");
             }
             myLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, onLoaderReady);
             myLoader.load(new URLRequest("https://flaswf.googlecode.com/svn/trunk/BitmapFont/En/lazyfont.png"), context);
