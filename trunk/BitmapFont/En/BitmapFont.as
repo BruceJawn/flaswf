@@ -264,7 +264,6 @@ package {
 			out.threshold (out, out.rect,new Point(), "==", 0xff00ffff);
 
 		}//end of function
-   //====================================
 
     }//end of class
 }//end of package
