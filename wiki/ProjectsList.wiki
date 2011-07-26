@@ -104,6 +104,11 @@ This page will be updated from time to time.
   * *Description:* XML based animation system in Flash AS3. 
   * *Page:*
 
+==Flash FANN(sub-project of ?)==
+  * *Status:* ||Concept||Working in Process||Alpha||Beta||v? Released!|| 
+  * *Description:* Summary of the project.
+  * *Page:* [http://code.google.com/p/flaswf/wiki/FlashFANN]
+
 ==GROUFST2 Terrain Raycaster==
   * *Status:* ||v? Released!|| 
   * *Description:* GROUFST2 Terrain Raycaster.
