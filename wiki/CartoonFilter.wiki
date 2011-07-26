@@ -25,10 +25,6 @@ Add your content here.
 == Pics: ==
 
 == Demo: ==
-[http://bruce-lab.blogspot.com/2009/04/cartoonize-image-by-as30.html]
-
-[http://bruce-lab.blogspot.com/2009/05/image-binarization-and-edge-tracing-in.html]
-
 [http://www.adobe.com/cfusion/exchange/index.cfm?event=extensionDetail&loc=en_us&extid=2400022]
 
 [http://wonderfl.net/c/dCMl]
@@ -43,5 +39,8 @@ Add your content here.
 [http://flaswf.googlecode.com/svn/trunk/Palette%20AS3/]
 
 == Blog Posts: ==
+[http://bruce-lab.blogspot.com/2009/04/cartoonize-image-by-as30.html]
+
+[http://bruce-lab.blogspot.com/2009/05/image-binarization-and-edge-tracing-in.html]
 
 == Links: ==
