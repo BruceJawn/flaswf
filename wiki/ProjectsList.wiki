@@ -225,10 +225,10 @@ This page will be updated from time to time.
   * *Description:*
   * *Page:* [http://code.google.com/p/flaswf/wiki/UniEngine]
 
-==V-Lib(sub-project of UniEngine)==
+==vLib(sub-project of UniEngine)==
   * *Status:* ||_Beta_||
-  * *Description:*
-  * *Page:*
+  * *Description:* The virtual library project, a AS3 swc lib to manage your flash project's resources. 
+  * *Page:* [http://code.google.com/p/flaswf/wiki/vLib]
 
 ==Voxel Terrain==
   * *Status:* ||_v0.1 Released!_|| 
