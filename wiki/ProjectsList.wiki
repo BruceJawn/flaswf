@@ -226,7 +226,7 @@ This page will be updated from time to time.
   * *Page:* [http://code.google.com/p/flaswf/wiki/UniEngine]
 
 ==vLib(sub-project of UniEngine)==
-  * *Status:* ||_Beta_||
+  * *Status:*  ||_v0.1 Released!_||
   * *Description:* The virtual library project, a AS3 swc lib to manage your flash project's resources. 
   * *Page:* [http://code.google.com/p/flaswf/wiki/vLib]
 
