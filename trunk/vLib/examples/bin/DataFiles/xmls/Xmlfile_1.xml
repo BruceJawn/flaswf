@@ -1,0 +1,35 @@
+<Movie>
+<MainTimeline>
+<Time_0>
+<code> 
+  <call method="graphics.beginFill" args="0x2772B3" />
+  <call method="graphics.drawRect" args="0, 0, 400, 400"/>
+  
+  <make reference="tf" class="flash.text.TextFormat">
+    <set  font="'Georgia'" size="20" color="0xFFFFFF" />
+  </make>
+  
+  <make reference="txt" class="flash.text.TextField" >
+     <set name="txt" x="10" y="10" autoSize="'left'" defaultTextFormat="tf" text="'Select a demo on the Left'" />
+  </make>
+  <call method="addChild" args="txt" />
+  
+  <set tf.size="12" />
+  <make reference="txt" class="flash.text.TextField" >
+     <set  name="txt" x="10" y="40" autoSize="'left'" defaultTextFormat="tf" text="'View XML source at the bottom of the page.'" />
+  </make>
+  <call method="addChild" args="txt" />
+</code>
+</Time_0>
+<Time_100>
+<code> 
+</code>
+</Time_100>
+</MainTimeline>
+<Tween>
+<camera>
+<Frame_0 time="0"><values rotation="100" x="50" y="30" width="500" height="500"/></Frame_0>
+<Frame_1 time="100"><values rotation="10" x="10" y="10" width="50" height="50"/></Frame_1>
+</camera>
+</Tween>
+</Movie>
