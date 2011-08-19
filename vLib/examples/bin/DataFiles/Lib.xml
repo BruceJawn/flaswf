@@ -1,0 +1,38 @@
+<Lib>
+<Level0>
+
+<Text>
+<Textfile_0> <values URL="DataFiles/texts/Textfile_0.txt"/> </Textfile_0>
+<Textfile_1> <values URL="DataFiles/texts/Textfile_1.txt"/> </Textfile_1>
+</Text>
+
+<Xml>
+<Xmlfile_0> <values URL="DataFiles/xmls/Xmlfile_0.xml"/> </Xmlfile_0>
+<Xmlfile_1> <values URL="DataFiles/xmls/Xmlfile_1.xml"/> </Xmlfile_1>
+</Xml>
+
+
+<Texture>
+<JPGfile> <values URL="DataFiles/textures/JPGfile.JPG"/> </JPGfile>
+<PNGfile> <values URL="DataFiles/textures/PNGfile.PNG"/> </PNGfile>
+</Texture>
+
+<Swf>
+<enemydead><values URL="DataFiles/swfs/enemydead.swf"/></enemydead>
+<enemyfire><values URL="DataFiles/swfs/enemyfire.swf"/></enemyfire>
+</Swf>
+
+
+<Sound>
+<S0><values URL="DataFiles/sounds/sound1.mp3"/></S0>
+<S1><values URL="DataFiles/sounds/sound2.mp3"/></S1>
+<S2><values URL="DataFiles/sounds/sound3.mp3"/></S2>
+</Sound>
+
+<Bin>
+<Binaryfile_0> <values URL="DataFiles/bins/Binaryfile_0.bin"/> </Binaryfile_0>
+<Binaryfile_1> <values URL="DataFiles/bins/Binaryfile_1.bin"/> </Binaryfile_1>
+</Bin>
+
+</Level0>
+</Lib>

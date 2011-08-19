@@ -1,0 +1,40 @@
+<code>
+   <make reference="blur" class="flash.filters.BlurFilter">
+	 <set blurX="10" blurY="10" />
+   </make>
+   <make reference="filts" class="Array">
+	 <call method="push">
+	   <arg reference="blur" />
+	 </call>
+   </make>
+   <make reference="mat" class="flash.geom.Matrix">
+	 <call method="rotate" args="1" />
+	 <set tx="100" ty="100" />
+   </make>
+   <make reference="box" class="flash.display.Sprite">
+	   <setRef filters="filts" transform.matrix="mat"/>
+	   <call method="graphics.beginFill" args="0x000000" />
+	   <call method="graphics.drawRect" args="-50,-50,100,100" />
+   </make>
+   <call method="addChild">
+	 <arg reference="box"/>
+   </call>
+   <make reference="tf" class="flash.text.TextFormat">
+	<set font="_sans" size="12" color="0xFFFFFF" />
+   </make>
+   <make reference="txt" class="flash.text.TextField">
+	 <setRef defaultTextFormat="tf" />
+	 <set autoSize="center" text="XML to AS3" />
+   </make>
+   <make reference="circle" class="flash.display.Sprite">
+	   <set x="300" y="300" />
+	   <call method="graphics.beginFill" args="0xFF0000" />
+	   <call method="graphics.drawCircle" args="0,0,100" />
+	   <call method="addChild">
+		 <arg reference="txt" />
+	   </call>
+   </make>
+   <call method="addChild">
+	 <arg reference="circle"/>
+   </call>
+</code>
