@@ -32,6 +32,7 @@ Export a .as Class with Embeds automatically.
 
 == Download: ==
 bin: [https://flaswf.googlecode.com/svn/trunk/vLib/bin]
+
 examples: [https://flaswf.googlecode.com/svn/trunk/vLib/examples]
 == Source: ==
 
