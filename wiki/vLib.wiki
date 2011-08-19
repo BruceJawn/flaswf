@@ -35,6 +35,7 @@ Export a .as Class with Embeds automatically.
 == Source: ==
 
 == API References: ==
+{{{
 public class Lib extends Sprite
 {
 		public function getBin (name:String) : ByteArray;
@@ -164,6 +165,7 @@ public class Lib extends Sprite
        **/
 
 }
+}}}
 == Blog Posts: ==
 
 == Links: ==
