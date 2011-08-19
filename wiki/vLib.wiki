@@ -169,5 +169,5 @@ public class Lib extends Sprite
 }
 }}}
 == Blog Posts: ==
-
+[http://bruce-lab.blogspot.com/2011/08/use-vlibswc-to-manage-flash-project.html]
 == Links: ==
