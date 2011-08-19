@@ -41,7 +41,7 @@ package
 			{
 			myLib.load(new DataFiles_Class());
 			addChild(myLib.getSwf("enemyfire"));
-			var test = myLib.getSwf("enemydead")
+			var test = myLib.getSwf("enemydead");
 			addChild(test);
 			test.x = 100;
 			
