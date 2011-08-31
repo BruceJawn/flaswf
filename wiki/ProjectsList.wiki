@@ -42,7 +42,7 @@ This page will be updated from time to time.
 ==Bengine(sub-project of UniEngine)==
   * *Status:* ||_v0.1 Released!_|| 
   * *Description:* Voxel based 2.5D/3D game engine for Flash.
-  * *Page:*
+  * *Page:* [http://bruce-lab.blogspot.com/p/bengine.html]
 
 ==Begine Race(sub-project of Begine)==
   * *Status:* ||_v0.3 Released!_|| 
