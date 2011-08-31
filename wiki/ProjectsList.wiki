@@ -203,7 +203,7 @@ This page will be updated from time to time.
 ==SWF-Cry==
   * *Status:* ||_v0.2 Released!_|| 
   * *Description:* Free Online SWF Encryptor and Obfuscator for AS3. 
-  * *Page:*
+  * *Page:* [http://bruce-lab.blogspot.com/p/swf-cry.html]
 
 ==Texture Burner==
   * *Status:* ||_Beta_|| 
