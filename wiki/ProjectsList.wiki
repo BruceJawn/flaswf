@@ -29,11 +29,6 @@ This page will be updated from time to time.
   * *Description:* Game console system for Flash games.
   * *Page:*
 
-==Back to Wolfenstein(sub-project of Alchemy Ray Caster)==
-  * *Status:* ||_Concept_|| 
-  * *Description:* Classic FPS Wolfenstein3D remake in Flash from scratch.
-  * *Page:* [http://code.google.com/p/flaswf/wiki/BackToWolfenstein]
-
 ==Bed(sub-project of Bengine)==
   * *Status:* ||_Concept_||
   * *Description:* Voxel map/level editor for Bengine.
@@ -74,11 +69,6 @@ This page will be updated from time to time.
   * *Description:* Script and Vector Art based game engine in Flash AS3. 
   * *Page:*
 
-==FPS 2D==
-  * *Status:* ||_Alpha_|| 
-  * *Description:* 2D FPS game engine. 
-  * *Page:*
-
 ==Fractal Nature==
   * *Status:* ||_Alpha_|| 
   * *Description:* Fractal art generation for Flash. 
@@ -103,16 +93,6 @@ This page will be updated from time to time.
   * *Status:* ||v? Released!|| 
   * *Description:* GROUFST2 Terrain Raycaster.
   * *Page:* [http://code.google.com/p/flaswf/wiki/GROUFST2]
-
-==Jiang Shen==
-  * *Status:* ||_Alpha_|| 
-  * *Description:* Chinese chess game in Flash. 
-  * *Page:*
-
-==MegaHal Flash==
-  * *Status:* ||v? Released!|| 
-  * *Description:* Flash port of MegaHal? ChatBot.
-  * *Page:* [http://code.google.com/p/flaswf/wiki/MegahalFlash]
 
 ==Palette AS3==
   * *Status:* ||_Alpha_||
@@ -143,7 +123,6 @@ This page will be updated from time to time.
   * *Status:* ||_Concept_||
   * *Description:* A framework for making Flash games.
   * *Page:*
-
 
 ==Triangle 3D==
   * *Status:* ||_Alpha_||
@@ -224,11 +203,6 @@ This page will be updated from time to time.
   * *Status:* ||_v0.1 Released!_|| 
   * *Description:* AS3 voxel terrain engine.
   * *Page:*
-
-==Western Wolf(sub-project Alchemy Ray Caster)==
-  * *Status:* ||Concept|| 
-  * *Description:* Wolfenstein3D-like western shooting game.
-  * *Page:* 
 
 ==X-Bone==
   * *Status:* ||_Beta_|| 
