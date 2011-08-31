@@ -173,7 +173,7 @@ This page will be updated from time to time.
 ==Ray Voxel==
   * *Status:* ||_Alpha_||
   * *Description:* Raytracing voxel rendering. 
-  * *Page:*
+  * *Page:* [http://code.google.com/p/flaswf/wiki/RayVoxel]
 
 ==Ray Tracer==
   * *Status:* ||_Alpha_||
@@ -193,7 +193,7 @@ This page will be updated from time to time.
 ==Slice Eye 3D==
   * *Status:* ||_v0.1 Released!_|| 
   * *Description:* 3D slice engine in AS3.0.
-  * *Page:*
+  * *Page:* [http://code.google.com/p/flaswf/wiki/SliceEye3D]
 
 ==Starfield==
   * *Status:* ||_Beta_|| 
