@@ -44,16 +44,6 @@ This page will be updated from time to time.
   * *Description:* Voxel based 2.5D/3D game engine for Flash.
   * *Page:* [http://bruce-lab.blogspot.com/p/bengine.html]
 
-==Begine Race(sub-project of Begine)==
-  * *Status:* ||_v0.3 Released!_|| 
-  * *Description:* 3D Race powered by Bengine.
-  * *Page:* [http://my.2144.cn/zt/mochi/view/1000000426]
-
-==Blaze(sub-project of Begine)==
-  * *Status:* ||_Concept_|| 
-  * *Description:* 3D action powered by Bengine.
-  * *Page:* 
-
 ==BitmapFont(sub-project of UniEngine)==
   * *Status:* ||_Alpha_|| 
   * *Description:* Bitmap Font text engine for Flash games.
