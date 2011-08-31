@@ -33,7 +33,6 @@ More to come...
   * *Status:* ||_v0.3 Released!_|| 
   * *Description:* 3D Race powered by Bengine.
   * *Page:* [http://code.google.com/p/flaswf/wiki/BengineRace]
-[http://my.2144.cn/zt/mochi/view/1000000426]
 
 ==Blaze(sub-project of Begine)==
   * *Status:* ||_Concept_|| 
