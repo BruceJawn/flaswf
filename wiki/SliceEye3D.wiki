@@ -27,7 +27,7 @@ Add your content here.
 == Demo: ==
 
 == Source: ==
-[http://code.google.com/p/flaswf/downloads/detail?name=slice_eye_v0.1.rar&can=2&q=]
+[http://code.google.com/p/flaswf/downloads/detail?name=slice_eye_v0.1.rar]
 
 == Blog Posts: ==
 [http://bruce-lab.blogspot.com/2008/08/3d-slice-engine-in-as30.html]
