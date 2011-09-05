@@ -97,7 +97,7 @@ More to come...
 ==The Feeder(sub-project of ?)==
   * *Status:* ||v? Released!|| 
   * *Description:* Summary of the project.
-  * *Page:* Click this for project detals.
+  * *Page:* http://code.google.com/p/flaswf/wiki/TheFeeder
 
 ==FlashTank(sub-project of ?)==
   * *Status:* ||Concept|| 
