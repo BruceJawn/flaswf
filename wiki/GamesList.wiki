@@ -14,7 +14,8 @@ Released games: [https://en.mochimedia.com/community/profile/Bruce_Jawn/portfoli
 
 Games with full source code: ~~Coming soon...~~
 MegahalFlash,
-JYtrpgYDZS(JYQXZTextRPG),
+JYtrpgYDZS(JYQXZTextRPG), 
+TheFeeder,
 More to come...
 
 = Details =
