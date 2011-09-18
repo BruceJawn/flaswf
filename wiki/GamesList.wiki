@@ -108,7 +108,7 @@ More to come...
 ==GirlSword(sub-project of ?)==
   * *Status:* ||Concept|| 
   * *Description:* 越女剑
-  * *Page:* 
+  * *Page:* http://code.google.com/p/flaswf/wiki/GirlSword
 
 ==JYQXZFlash(sub-project of ?)==
   * *Status:* ||Concept|| 
