@@ -19,7 +19,7 @@
 
 == Labels: ==
    * languages C, AS3
-   * tools Alchemy
+   * tools Alchemy, SDL
 == Pics: ==
 
 == Demo: ==
