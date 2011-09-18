@@ -20,8 +20,8 @@ Optimization
 ||Open Source/GNU GPL||
 
 == Labels: ==
-   * languages
-   * tools
+   * languages C, AS3
+   * tools Alchemy, SDL
 == Pics: ==
 
 == Demo: ==
