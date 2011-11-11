@@ -1,0 +1,8 @@
+HaXe 2.08, NME 3.1 RC1,
+
+haxelib dev nme "C:\Downloads\NME31"
+cd C:\Downloads\Groufst2NME_HTML5
+
+haxelib run nme test "Groufst2NME.nmml"  html5
+haxelib run nme test "Groufst2NME.nmml"  flash
+haxelib run nme test "Groufst2NME.nmml"  windows
