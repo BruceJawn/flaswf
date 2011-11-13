@@ -11,7 +11,7 @@ Simple script engine.
 == Description: ==
 Assembly-like Script Engine for Flash games.
 Programming Language designed to be simple and portable.
-Also see BTVM.
+Also see [http://code.google.com/p/flaswf/wiki/BTVM BTVM].
 == Features: ==
 
 == Todos: ==
