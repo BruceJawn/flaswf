@@ -7,7 +7,7 @@
 ||Alpha||
 
 == Description: ==
-Bruce's Tiny Virtual Machine. A minimal implementation of BScript.
+Bruce's Tiny Virtual Machine. A minimal implementation of [http://code.google.com/p/flaswf/wiki/B_script BScript].
 
 == Features: ==
 
