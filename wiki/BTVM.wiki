@@ -2,14 +2,12 @@
 
 = BTVM =
 
-Add your content here.
-
-
 == Status: ==
 
 ||Alpha||
 
 == Description: ==
+Bruce's Tiny Virtual Machine. A minimal implementation of BScript.
 
 == Features: ==
 
