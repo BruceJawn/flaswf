@@ -1,0 +1,7 @@
+cd /cygdrive/f/alchemy/wujinxiaochu/lib
+
+source /cygdrive/f/alchemy/alchemy-setup
+
+alc-on  
+
+gcc flashSDL.c -DFLASH -Isdl -lSDL -swc -O3 -o libSDL.swc
