@@ -1,21 +1,21 @@
-﻿package
+ package
 {
 	import flash.display.*
 	public class TestVM extends Sprite
 	{
-		//const input
+    //const input
 		const BC_setloci =0x00;
 		const BC_setlocf =0x01;
 		const BC_setlocs =0x02;
-        //const input
+    //const input
 		const BC_cpyloci =0x03;
 		const BC_cpylocf =0x04;
 		const BC_cpylocs =0x05;
-        //variable input
+    //variable input
 		const BC_setint =0x06;
 		const BC_setflt =0x07;
 		const BC_setstr =0x08;
-        //const input
+    //const input
 		const BC_goto =0x09;
 		const BC_ifto =0x0A;
 		const BC_call =0x0B;
