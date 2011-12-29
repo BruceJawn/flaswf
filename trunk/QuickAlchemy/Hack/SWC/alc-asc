@@ -14,7 +14,7 @@
 
 # Notes: fixed "&nbsp" format problem, fixed catalog.xml space problem.
 
-# Put this file "alc-asc" into "alchemy/achacks" folder!
+# Put this file "alc-asc" into "alchemy/achacks" folder!  And search & replace the string "F:/alchemy/" to your Alchemy path.
 
 #
 
