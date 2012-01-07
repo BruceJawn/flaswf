@@ -39,7 +39,7 @@
 		{
 			var browserName:String = getBrowserName();
 			
-			if (getBrowserName() == "Firefox")
+			if (browserName == "Firefox")
 			{
 				ExternalInterface.call(WINDOW_OPEN_FUNCTION, url, window, features);
 			}
