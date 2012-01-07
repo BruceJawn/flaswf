@@ -1,4 +1,4 @@
-﻿package com.apdevblog.utils
+ package com.apdevblog.utils
 {
 	import flash.external.ExternalInterface;
 	import flash.net.URLRequest;
@@ -77,7 +77,7 @@
 			var browserAgent:String = "";
 			if (ExternalInterface.available)
 			{
-				ExternalInterface.call("function getBrowser(){return navigator.userAgent;}");
+				browserAgent = ExternalInterface.call("function getBrowser(){return navigator.userAgent;}");
 			}
 			//Determines brand of browser using a find index. If not found indexOf returns (-1).
 			if (browserAgent != null && browserAgent.indexOf("Firefox") >= 0)
