@@ -88,7 +88,7 @@
 			{
 				browser = "Safari";
 			}
-			else if (browserAgent != null && browserAgent.indexOf("MSIE") >= 0)
+			else if (browserAgent == null || browserAgent.indexOf("MSIE") >= 0)
 			{
 				browser = "IE";
 			}
