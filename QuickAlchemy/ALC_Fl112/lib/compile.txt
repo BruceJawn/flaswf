@@ -1,0 +1,4 @@
+cd /cygdrive/f/alchemy/ALC_Fl112/lib
+source /cygdrive/f/alchemy/alchemy-setup
+alc-on
+gcc lookupeffect.c  -O3 -Wall -swc -o lookupeffect.swc
