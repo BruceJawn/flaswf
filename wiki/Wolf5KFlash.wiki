@@ -29,8 +29,7 @@ monsters with life (distance<5 player get hit)
 more color choices, black/white?
 == License: ==
 
-||Open Source/MIT||
-||Closed Source/Free||
+||Open Source/GPL||
 
 == Labels: ==
    * languages
@@ -41,8 +40,10 @@ more color choices, black/white?
 https://en.mochimedia.com/community/games/Bruce_Jawn/wolf5k-flash
 
 == Source: ==
+https://flaswf.googlecode.com/svn/trunk/Games/Wolf5kFlash/
 
 == Blog Posts: ==
+http://bruce-lab.blogspot.com/2012/06/source-code-of-game-wolf5k-flash.html
 
 == Links: ==
 https://en.mochimedia.com/community/games/Bruce_Jawn/wolf5k-flash
