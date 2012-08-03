@@ -45,10 +45,22 @@ More to come...
   * *Description:* Classic FPS Wolfenstein3D remake in Flash from scratch.
   * *Page:* [http://code.google.com/p/flaswf/wiki/BackToWolfenstein]
 
+
+==Destructor(sub-project of Bengine)==
+  * *Status:* ||_v0.? Released!_|| 
+  * *Description:* First FPS game powered by Bengine.
+  * *Page:* [http://bruce-lab.blogspot.com/2012/06/destructor-voxel-based-fps-game-power.html]
+
 ==FPS 2D==
   * *Status:* ||_Alpha_|| 
   * *Description:* 2D FPS game engine. 
   * *Page:*
+
+
+==Jump To Pass(sub-project of Z-Ground)==
+  * *Status:* ||_v0.8 Released!_|| 
+  * *Description:* First FPS game powered by Z-Ground.
+  * *Page:* [http://bruce-lab.blogspot.sg/2012/08/jump-to-pass-new-25d-game-powered-by-z.html]
 
 ==Voxel Wolf(sub-project of ?)==
   * *Status:* ||Concept|| 
