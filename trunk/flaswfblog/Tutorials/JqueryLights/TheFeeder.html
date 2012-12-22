@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <title>The Feeder</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script>
+      $(document).ready(function(){
+     
+      $("#the_lights").fadeTo(1,0);
+      document.getElementById("the_lights").style.display="none";
+
+      $("#turnoff").click(function () {
+      $("#the_lights").css({'display' : 'block'});
+      $("#the_lights").fadeTo("slow",1);
+      $("#swf").fadeTo("slow",1);
+      });
+      $("#soft").click(function () {
+      document.getElementById("the_lights").style.display="block";
+      $("#the_lights").fadeTo("slow",0.8);
+      $("#swf").fadeTo("slow",0.8);
+      });
+      $("#turnon").click(function () {
+      document.getElementById("the_lights").style.display="block";
+      $("#the_lights").fadeTo("slow",0,function() {
+      document.getElementById("the_lights").style.display="none";
+      });
+      $("#swf").fadeTo("slow",0);
+      });
+      });
+    </script>
+    <style>
+      html{
+      width:100%;
+      height:100%;
+      margin:0px;
+      }
+      #the_lights{
+      background-color:#000;
+      height:100%;
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      display:none;
+      }
+      #standout{
+      cursor:pointer;
+      cursor:hand;
+      color:#0000ff;
+      padding:5px;
+      background-color:white;
+      position:relative;
+      z-index:1000;
+      }
+      #swf{
+      padding:5px;
+      position:relative;
+      z-index:100;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- This is a comment - body begins -->
+    <!-- ############################### -->
+    <!-- ############################### -->
+
+    <!-- ########## Embed SWF ########## -->
+
+    <center>
+      <a href="http://play.flaswf.tk/" target="_blank">Go Back</a></br>
+      <div id = "swf">
+        <embed src="http://games.mochiads.com/c/g/the-feeder/TheFeeder.swf"quality="high" bgcolor="#000000" width="640" height="480" name="The Feeder" align="middle" allowScriptAccess="sameDomain"
+               allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+      </div>
+      <div id="the_lights">
+      </div>
+      <a href="http://adf.ly/821527/http://games.mochiads.com/c/g/the-feeder/TheFeeder.swf"target="_blank">Download Game!</a></br>
+    </center>
+    <!-- ########## Embed SWF ########## -->
+
+    <!-- ########## Introduction ####### -->
+    <p>
+      [Introduction]</br>
+      It is a Wolfenstein3D like first person "shooting" game.</br>
+      Risk your life to feed those "lovely" hungry monsters.</br>
+      Feed all monsters in the level to go to next level.</br>
+      Be careful and good luck!</p>
+    <!-- ########## Introduction ####### -->
+
+    <!-- ########## Controls ########### -->
+    <p>
+      [Controls]</br>
+      W/up: move forward</br>
+      S/down: move back</br>
+      left arrow key: turn left</br>
+      A: strafe left</br>
+      right arrow key: turn right</br>
+      D: strafe right</br>
+      ----------</br>
+      Space: shoot</br>
+      M: map</br>
+      Enter: pause game/view game status</br>
+      ----------</br>
+      Objective: Feed all monsters in the level to go to next level.</br>
+      Enter key to view time, level, life and score.</br>
+    </p>
+    <!-- ########## Controls ########### -->
+
+    <!-- ########## Other Infos ######## -->
+    <p>
+      [About]</br>
+      Developer: Bruce</br>
+      Links: <a href="http://adf.ly/821527/banner/http://bruce-lab.blogspot.com/" target="_blank">http://bruce-lab.blogspot.com/</a></p>
+    <!-- ########## Other Infos ######## -->
+
+    <!-- ############################### -->
+    <!-- ############################### -->
+    <!-- This is a comment - body ends -->
+    <center>
+      <div id = "standout">
+        <div id = "turnoff"><u>Lights off</u></div><div id = "soft"><u>Soft lights</u></div><div id = "turnon"><u>Lights on</u></div>
+      </div>
+    </center>
+  </body>
+</html>
+
