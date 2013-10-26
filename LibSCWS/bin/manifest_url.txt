@@ -1,2 +1,2 @@
-http://flaswf.googlecode.com/svn/trunk/LibSCWS/bin/dict.utf8.xdb /dict.utf8.xdb
+http://www.xunsearch.com/scws/demo/pscws23/dict/dict.xdb /dict.utf8.xdb
 http://flaswf.googlecode.com/svn/trunk/LibSCWS/bin/rules.utf8.ini /rules.utf8.ini
