@@ -1,0 +1,10 @@
+Build VFS.abc:
+cd "F:/LibSCWS/lib/VFS"
+make FLASCC=/cygdrive/d/FlasCC_1.0.0/sdk FLEX=/cygdrive/d/Program\ Files/FlashDevelop/Tools/flexsdk
+
+Copy "VFS.abc" to "libscws" folder.
+
+Build libscws.swc:
+cd "F:/LibSCWS/lib/libscws"
+make FLASCC=/cygdrive/d/FlasCC_1.0.0/sdk FLEX=/cygdrive/d/Program\ Files/FlashDevelop/Tools/flexsdk
+

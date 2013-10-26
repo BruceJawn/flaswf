@@ -1,0 +1,20 @@
+T:
+	@echo "-------- Make SWF --------"
+        
+	$(AS3COMPILERARGS)	-import $(call nativepath,$(FLASCC)/usr/lib/builtin.abc) \
+				-import $(call nativepath,$(FLASCC)/usr/lib/playerglobal.abc) \
+				-import $(call nativepath,$(FLASCC)/usr/lib/BinaryData.abc) \
+				-import $(call nativepath,$(FLASCC)/usr/lib/ISpecialFile.abc) \
+				-import $(call nativepath,$(FLASCC)/usr/lib/IBackingStore.abc) \
+				-import $(call nativepath,$(FLASCC)/usr/lib/IVFS.abc) \
+				-import $(call nativepath,$(FLASCC)/usr/lib/InMemoryBackingStore.abc) \
+				-import $(call nativepath,$(FLASCC)/usr/lib/PlayerKernel.abc) \
+				-import VFS.abc \
+				Console.as -outdir . -out Console
+
+	"$(FLASCC)/usr/bin/gcc" $(BASE_CFLAGS) -O3 charset.c crc32.c darray.c lock.c pool.c rule.c scws.c xdb.c xdict.c xtree.c as3api.c main.c VFS.abc -symbol-abc=Console.abc -emit-swf -swf-version=17 -swf-size=800x600 -o vfstest.swf
+
+include Makefile.common
+
+clean:
+	rm -f *.swf *.swc *.bc *.exe

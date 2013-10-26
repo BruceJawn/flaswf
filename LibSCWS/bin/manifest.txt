@@ -1,0 +1,2 @@
+dict.utf8.xdb /dict.utf8.xdb
+rules.utf8.ini /rules.utf8.ini
