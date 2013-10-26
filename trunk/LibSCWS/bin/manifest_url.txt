@@ -1,0 +1,2 @@
+dict.utf8.xdb /http://flaswf.googlecode.com/svn/trunk/LibSCWS/bin/dict.utf8.xdb
+rules.utf8.ini /http://flaswf.googlecode.com/svn/trunk/LibSCWS/bin/rules.utf8.ini
