@@ -1,0 +1,2 @@
+cd "F:\FlasCC_SWC_SCWS\lib\VFS"
+make FLASCC=/cygdrive/d/FlasCC_1.0.0/sdk FLEX=/cygdrive/d/Program\ Files/FlashDevelop/Tools/flexsdk
