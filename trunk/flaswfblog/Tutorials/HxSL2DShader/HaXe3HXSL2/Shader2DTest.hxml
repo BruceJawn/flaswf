@@ -1,0 +1,9 @@
+-cp ../lib
+-swf Shader2DTest.swf
+-swf-version 9
+-swf-header 800:600:30:FFFFFF
+--flash-strict
+-main Shader2DTest
+-swf-version 11.8
+-lib format
+-lib hxsl
