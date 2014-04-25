@@ -1,0 +1,2 @@
+cd "F:/CB_callAS3fromC/flyieldAlternative"
+make FLASCC=/cygdrive/d/Crossbridge_1.0.1/sdk FLEX=/cygdrive/d/Program\ Files/FlashDevelop/Tools/flexsdk
