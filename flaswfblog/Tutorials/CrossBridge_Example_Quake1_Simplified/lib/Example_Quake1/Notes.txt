@@ -1,0 +1,11 @@
+1. Copy the original quake (demo) game data file "pak0.pak" to ".\CrossBridge_Example_Quake1_Simplified\src\id1\"
+
+2. Copy sdlquake source files from ".\Crossbridge_1.0.1\samples\Example_Quake1\sdlquake-1.0.9" (located in CrossBridge SDK samples) to ".\CrossBridge_Example_Quake1_Simplified\lib\Example_Quake1\sdlquake-1.0.9\sdlquake-1.0.9"
+
+3. Compile the swc:
+cd /cygdrive/d/CrossBridge_Example_Quake1_Simplified/lib/Example_Quake1
+make FLASCC=/cygdrive/d/Crossbridge_1.0.1/sdk FLEX=/cygdrive/d/Program\ Files/FlashDevelop/Tools/flexsdk
+
+4. Build the FlashDevelop project for the final swf.
+
+
