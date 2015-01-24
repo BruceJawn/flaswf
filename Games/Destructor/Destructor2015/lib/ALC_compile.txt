@@ -1,0 +1,12 @@
+cd /cygdrive/f/alchemy/Bengine_Race/lib
+
+source /cygdrive/f/alchemy/alchemy-setup
+
+alc-on
+
+gcc Bengine.c  -O3 -Wall -swc -o Bengine.swc
+
+gcc Bengine.c -O3 -FORCESYNC=1 -Wall -swc -o Bengine.swc 
+
+alc-asc 48028.achacks.as Bengine.swc 
+	
